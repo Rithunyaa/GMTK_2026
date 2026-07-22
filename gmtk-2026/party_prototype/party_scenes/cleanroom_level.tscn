@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cr0rwtf6ytq4d"]
+
+[ext_resource type="Script" uid="uid://cesygov5hf08s" path="res://party_prototype/party_script/clean_room_level.gd" id="1_hmsfl"]
+[ext_resource type="Texture2D" uid="uid://ctl27aac3xwgi" path="res://party_prototype/party_assets/laundry_basket.png" id="1_lspg1"]
+[ext_resource type="PackedScene" uid="uid://diwura135uvtc" path="res://party_prototype/party_scenes/Clothing.tscn" id="2_pbk0y"]
+[ext_resource type="Script" uid="uid://davvhu5d68fma" path="res://party_prototype/party_script/laundry_basket.gd" id="3_y1wj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_701n2"]
+size = Vector2(182.94855, 227.13214)
+
+[node name="CleanRoom" type="Node2D" unique_id=411623831]
+script = ExtResource("1_hmsfl")
+clothing_scene = ExtResource("2_pbk0y")
+
+[node name="LaundryBasket" type="Area2D" parent="." unique_id=220298099]
+position = Vector2(581, 315)
+scale = Vector2(0.75431037, 0.7924901)
+script = ExtResource("3_y1wj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="LaundryBasket" unique_id=2005809352]
+texture = ExtResource("1_lspg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryBasket" unique_id=1407869486]
+position = Vector2(-5.3028564, 5.047394)
+scale = Vector2(1, 1.0000005)
+shape = SubResource("RectangleShape2D_701n2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=953796299]
+
+[node name="ClothesCounter" type="Label" parent="CanvasLayer" unique_id=166915714]
+offset_left = 852.0
+offset_right = 1156.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 30
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1937865131]
+offset_right = 314.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 30
+text = "Party starts in: 30 secs"
+
+[node name="PartyTimer" type="Timer" parent="." unique_id=2012370698]
+autostart = true
+
+[connection signal="area_entered" from="LaundryBasket" to="LaundryBasket" method="_on_area_entered"]
+[connection signal="body_entered" from="LaundryBasket" to="LaundryBasket" method="_on_body_entered"]
+[connection signal="timeout" from="PartyTimer" to="." method="_on_party_timer_timeout"]

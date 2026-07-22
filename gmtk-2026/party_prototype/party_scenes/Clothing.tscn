@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://diwura135uvtc"]
+
+[ext_resource type="Script" uid="uid://dl1ygyobedop4" path="res://party_prototype/party_script/clothing.gd" id="1_i7ogi"]
+[ext_resource type="Texture2D" uid="uid://bw5g602dv8u4a" path="res://party_prototype/party_assets/clothingpile_1.png" id="2_hc6r4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1wj7"]
+size = Vector2(189, 100)
+
+[node name="Clothing1" type="Area2D" unique_id=2034316761]
+script = ExtResource("1_i7ogi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1716580802]
+texture = ExtResource("2_hc6r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1709744054]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_y1wj7")
