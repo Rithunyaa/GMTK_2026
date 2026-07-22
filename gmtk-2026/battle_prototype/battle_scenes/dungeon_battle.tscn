@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dbnmjbmysi1lg"]
+
+[ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="1_ab4tr"]
+[ext_resource type="Texture2D" uid="uid://dtwb6rnat4s71" path="res://battle_prototype/battle_assets/Character.png" id="2_uavib"]
+[ext_resource type="Texture2D" uid="uid://c0hl8r58m4icu" path="res://battle_prototype/battle_assets/dungeon_floor.png" id="3_feg71"]
+[ext_resource type="Texture2D" uid="uid://csddaaatrfa10" path="res://battle_prototype/battle_assets/dungeon_wall.png" id="4_k4wk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feg71"]
+size = Vector2(51, 94.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a512s"]
+size = Vector2(106, 80)
+
+[node name="dungeon_battle" type="Node2D" unique_id=723906238]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1490881749]
+script = ExtResource("1_ab4tr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=850830655]
+position = Vector2(603.62506, 491.25)
+scale = Vector2(0.15512799, 0.14955357)
+texture = ExtResource("2_uavib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1297012770]
+position = Vector2(600.5, 492.25)
+shape = SubResource("RectangleShape2D_feg71")
+
+[node name="Dungeon" type="Node2D" parent="." unique_id=726826043]
+
+[node name="Floor" type="Sprite2D" parent="Dungeon" unique_id=25506983]
+z_index = -5
+position = Vector2(568.75, 329)
+scale = Vector2(2.0350428, 1)
+texture = ExtResource("3_feg71")
+
+[node name="Wall" type="StaticBody2D" parent="Dungeon" unique_id=661580232]
+
+[node name="Sprite2D" type="Sprite2D" parent="Dungeon/Wall" unique_id=477011948]
+position = Vector2(411.00003, 270)
+scale = Vector2(1.1192662, 1)
+texture = ExtResource("4_k4wk0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dungeon/Wall" unique_id=906663541]
+position = Vector2(411, 267)
+shape = SubResource("RectangleShape2D_a512s")
+debug_color = Color(0.99951607, 0, 0.12488618, 0.41960785)
+
+[node name="Wall2" type="StaticBody2D" parent="Dungeon" unique_id=1234975982]
+
+[node name="Sprite2D" type="Sprite2D" parent="Dungeon/Wall2" unique_id=1397689561]
+position = Vector2(319, 263)
+scale = Vector2(1.1192662, 1)
+texture = ExtResource("4_k4wk0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dungeon/Wall2" unique_id=1185384426]
+position = Vector2(308, 265)
+shape = SubResource("RectangleShape2D_a512s")
+debug_color = Color(0.99951607, 0, 0.12488618, 0.41960785)
