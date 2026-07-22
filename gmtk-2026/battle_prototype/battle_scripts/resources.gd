@@ -10,6 +10,7 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		print("Collected:", item_type)
+		body.inventory[item_type] += 1
+		print(body.inventory)
 
 		queue_free()

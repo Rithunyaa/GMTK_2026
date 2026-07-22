@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c7usgittxbmjm"]
+
+[ext_resource type="Script" uid="uid://ca0xef66ylddd" path="res://battle_prototype/battle_scripts/resources.gd" id="1_2tmeg"]
+[ext_resource type="Texture2D" uid="uid://cnk4an4yr40ix" path="res://battle_prototype/battle_assets/resources/shield_card.png" id="2_2tmeg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1y0c3"]
+radius = 31.0
+
+[node name="ShieldCard" type="Area2D" unique_id=267100676]
+script = ExtResource("1_2tmeg")
+item_type = "shield"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=728645461]
+position = Vector2(-4, -29.499998)
+scale = Vector2(1.3285714, 1.0147059)
+texture = ExtResource("2_2tmeg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2087698112]
+position = Vector2(-5, -33)
+shape = SubResource("CircleShape2D_1y0c3")
+debug_color = Color(0.4150723, 0.60628533, 1.92523e-07, 0.41960785)

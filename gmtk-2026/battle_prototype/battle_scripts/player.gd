@@ -3,6 +3,12 @@ extends CharacterBody2D
 # Player movement speed
 @export var speed: float = 200.0
 
+var inventory = {
+	"attack": 0,
+	"health": 0,
+	"shield": 0
+}
+
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO

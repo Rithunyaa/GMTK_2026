@@ -1,3 +1,29 @@
 [gd_scene format=3 uid="uid://deto6hcqxloet"]
 
-[node name="Node2D" type="Node2D" unique_id=1588363273]
+[ext_resource type="Script" uid="uid://cpr65ci5kk5yr" path="res://battle_prototype/battle_scenes/fight_battle.gd" id="1_rfe6e"]
+[ext_resource type="Texture2D" uid="uid://dtwb6rnat4s71" path="res://battle_prototype/battle_assets/Character.png" id="1_x48gh"]
+[ext_resource type="Texture2D" uid="uid://bbqj75q0abv4w" path="res://battle_prototype/battle_assets/Enemy.png" id="2_rfe6e"]
+
+[node name="FightBattle" type="Node2D" unique_id=1588363273]
+script = ExtResource("1_rfe6e")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=42884490]
+position = Vector2(144, 291)
+scale = Vector2(0.34273505, 0.30505952)
+texture = ExtResource("1_x48gh")
+
+[node name="Enemy" type="Sprite2D" parent="." unique_id=1853798304]
+position = Vector2(869, 289.00003)
+scale = Vector2(0.91433954, 0.73642236)
+texture = ExtResource("2_rfe6e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=413833272]
+
+[node name="AttackButton" type="Button" parent="CanvasLayer" unique_id=1692632425]
+offset_left = 64.0
+offset_top = 483.0
+offset_right = 318.0
+offset_bottom = 590.0
+text = "Attack"
+
+[connection signal="pressed" from="CanvasLayer/AttackButton" to="." method="_on_attack_button_pressed"]
