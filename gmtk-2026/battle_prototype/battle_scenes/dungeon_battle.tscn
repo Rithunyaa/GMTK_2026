@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://c5kexb3rk2wf6" path="res://battle_prototype/battle_scripts/main_dungeon.gd" id="1_gqwwc"]
 [ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="2_g36v8"]
 [ext_resource type="Texture2D" uid="uid://dtwb6rnat4s71" path="res://battle_prototype/battle_assets/Character.png" id="3_l2aay"]
-[ext_resource type="Texture2D" uid="uid://c0hl8r58m4icu" path="res://battle_prototype/battle_assets/dungeon_floor.png" id="4_42nfq"]
-[ext_resource type="Texture2D" uid="uid://csddaaatrfa10" path="res://battle_prototype/battle_assets/dungeon_wall.png" id="5_0fjk3"]
+[ext_resource type="Texture2D" uid="uid://c0hl8r58m4icu" path="res://battle_prototype/battle_assets/enviroment/dungeon_floor.png" id="4_42nfq"]
+[ext_resource type="Texture2D" uid="uid://csddaaatrfa10" path="res://battle_prototype/battle_assets/enviroment/dungeon_wall.png" id="5_0fjk3"]
+[ext_resource type="PackedScene" uid="uid://bwse6nr274csg" path="res://battle_prototype/battle_scenes/attack_card.tscn" id="6_g36v8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feg71"]
 size = Vector2(51, 94.5)
@@ -31,7 +32,7 @@ shape = SubResource("RectangleShape2D_feg71")
 
 [node name="Floor" type="Sprite2D" parent="Dungeon" unique_id=25506983]
 z_index = -5
-position = Vector2(568.75, 329)
+position = Vector2(588, 320)
 scale = Vector2(2.0350428, 1)
 texture = ExtResource("4_42nfq")
 
@@ -72,5 +73,8 @@ theme_override_font_sizes/font_size = 40
 wait_time = 10.0
 one_shot = true
 autostart = true
+
+[node name="AttackCard" parent="." unique_id=267100676 instance=ExtResource("6_g36v8")]
+position = Vector2(136, 230)
 
 [connection signal="timeout" from="CountDownTimer" to="." method="_on_count_down_timer_timeout"]

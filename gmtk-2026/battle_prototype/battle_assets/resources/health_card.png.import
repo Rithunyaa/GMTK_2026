@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0hl8r58m4icu"
-path="res://.godot/imported/dungeon_floor.png-9e5febe7888eb1cc9da1f227647f3936.ctex"
+uid="uid://cvg8h2isapwe8"
+path="res://.godot/imported/health_card.png-dcdaad01156ecb69646a2d8c326f930b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://battle_prototype/battle_assets/dungeon_floor.png"
-dest_files=["res://.godot/imported/dungeon_floor.png-9e5febe7888eb1cc9da1f227647f3936.ctex"]
+source_file="res://battle_prototype/battle_assets/resources/health_card.png"
+dest_files=["res://.godot/imported/health_card.png-dcdaad01156ecb69646a2d8c326f930b.ctex"]
 
 [params]
 

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bwse6nr274csg"]
+
+[ext_resource type="Script" uid="uid://ca0xef66ylddd" path="res://battle_prototype/battle_scripts/resources.gd" id="1_mbe3g"]
+[ext_resource type="Texture2D" uid="uid://cg6vubwohxq5v" path="res://battle_prototype/battle_assets/resources/attack_card.png" id="2_jkkem"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1y0c3"]
+radius = 40.04997
+
+[node name="AttackCard" type="Area2D" unique_id=267100676]
+script = ExtResource("1_mbe3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=728645461]
+position = Vector2(-4, -38)
+scale = Vector2(1.3285714, 0.9634833)
+texture = ExtResource("2_jkkem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2087698112]
+position = Vector2(-6, -34)
+shape = SubResource("CircleShape2D_1y0c3")
+debug_color = Color(0.4150723, 0.60628533, 1.92523e-07, 0.41960785)
