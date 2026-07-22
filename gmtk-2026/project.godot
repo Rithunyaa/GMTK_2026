@@ -23,9 +23,10 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 folder_colors={
 "res://addons/": "blue",
-"res://assets/": "pink",
-"res://scenes/": "purple",
-"res://scripts/": "teal"
+"res://battle_prototype/": "red",
+"res://battle_prototype/battle_assets/": "red",
+"res://battle_prototype/battle_scenes/": "red",
+"res://battle_prototype/battle_scripts/": "red"
 }
 
 [physics]
