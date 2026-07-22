@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dbnmjbmysi1lg"]
+
+[ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="1_ab4tr"]
+[ext_resource type="Texture2D" uid="uid://dtwb6rnat4s71" path="res://battle_prototype/battle_assets/Character.png" id="2_uavib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feg71"]
+size = Vector2(104, 157)
+
+[node name="Node2D" type="Node2D" unique_id=723906238]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1490881749]
+script = ExtResource("1_ab4tr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=850830655]
+position = Vector2(628.0001, 455)
+scale = Vector2(0.23846154, 0.25744048)
+texture = ExtResource("2_uavib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1297012770]
+position = Vector2(621, 452.5)
+shape = SubResource("RectangleShape2D_feg71")
