@@ -3,22 +3,22 @@ extends Node2D
 @export var clothing_type_1: PackedScene
 @export var clothing_type_2: PackedScene
 @export var amount_of_clothes = 5
-var time_left = 30.0
 
 @onready var timer_label = $CanvasLayer/TimerLabel
-@onready var counter: Label = $CanvasLayer/ClothesCounter
 @onready var laundry_basket: Area2D = $LaundryBasket
+@onready var laundry_drop_sound = $LaundryDropSound
 
 var cleaned_clothes = 0
 var spawn_area = Rect2(100, 100, 950, 450)
 var spawned_positions = []
 
 
-
 func _ready():
-	randomize()
 	spawn_clothes()
-	update_counter()
+	update_timer()
+
+	GameTimer.time_updated.connect(update_timer)
+	GameTimer.time_finished.connect(go_to_bedroom)
 
 
 func spawn_clothes():
@@ -26,7 +26,7 @@ func spawn_clothes():
 	
 	var clothes_to_spawn = []
 
-	# Figure out who gets the extra clothing
+	# Decide clothing split
 	if randi() % 2 == 0:
 		for i in range(3):
 			clothes_to_spawn.append(clothing_type_1)
@@ -42,7 +42,7 @@ func spawn_clothes():
 			clothes_to_spawn.append(clothing_type_2)
 
 
-	# Randomize their order
+	# Randomize order
 	clothes_to_spawn.shuffle()
 
 
@@ -50,12 +50,11 @@ func spawn_clothes():
 	for clothing_scene in clothes_to_spawn:
 		var clothing = clothing_scene.instantiate()
 
-		var random_position = get_safe_spawn_position()
+		clothing.position = get_safe_spawn_position()
 
-		clothing.position = random_position
 		clothing.collected.connect(clothing_collected)
 
-		spawned_positions.append(random_position)
+		spawned_positions.append(clothing.position)
 
 		add_child(clothing)
 
@@ -63,27 +62,18 @@ func spawn_clothes():
 	laundry_basket.monitoring = true
 
 
+
 func clothing_collected():
+	laundry_drop_sound.play()
+
 	cleaned_clothes += 1
-	update_counter()
 
 	if cleaned_clothes == amount_of_clothes:
-		print("Party ready!")
-		get_tree().paused = true
+		print("Laundry finished!")
+		go_to_bedroom()
 
-func _on_party_timer_timeout():
-	time_left -= 0.1
-	
-	if time_left <= 0:
-		time_left = 0
-		print("You ran out of time!")
-		get_tree().paused = true
-	
-	update_timer()
 
-func update_counter():
-	counter.text = "Clothes Cleaned: " + str(cleaned_clothes) + "/" + str(amount_of_clothes)
-	
+
 func get_safe_spawn_position():
 	var position = Vector2.ZERO
 	
@@ -106,13 +96,16 @@ func get_safe_spawn_position():
 		if basket_distance > 300 and not too_close_to_clothes:
 			return position
 
-func update_timer():
-	var minutes = int(time_left) / 60
-	var seconds = int(time_left) % 60
-	var milliseconds = int((time_left - int(time_left)) * 100)
 
-	timer_label.text = "Party starts in: %02d:%02d:%02d" % [
-		minutes,
-		seconds,
-		milliseconds
-	]
+
+func update_timer():
+	timer_label.text = "Party starts in: " + GameTimer.get_time_text()
+
+
+
+func go_to_bedroom():
+	call_deferred("_change_to_bedroom")
+
+
+func _change_to_bedroom():
+	get_tree().change_scene_to_file("res://party_prototype/party_scenes/Bedroom.tscn")

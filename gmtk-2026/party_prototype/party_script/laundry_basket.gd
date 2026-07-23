@@ -7,3 +7,5 @@ func _on_area_entered(area):
 	animation.play("clothes_collected")
 	area.collected.emit()
 	area.queue_free()
+	
+	

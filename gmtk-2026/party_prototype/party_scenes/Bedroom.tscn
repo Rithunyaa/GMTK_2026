@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cvt8wb0oqj1fq"]
+
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="1_4vawo"]
+[ext_resource type="Script" uid="uid://c7snwx1274ss0" path="res://party_prototype/party_script/bedroom.gd" id="1_8vs60"]
+[ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="2_rmb8j"]
+[ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_5x8wb"]
+[ext_resource type="Texture2D" uid="uid://dtwb6rnat4s71" path="res://battle_prototype/battle_assets/Character.png" id="4_8vs60"]
+[ext_resource type="Script" uid="uid://c7047r1w0rtw0" path="res://party_prototype/party_script/laundry_task.gd" id="5_flaea"]
+[ext_resource type="Texture2D" uid="uid://ctl27aac3xwgi" path="res://party_prototype/party_assets/laundry_basket.png" id="6_7jf5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfpcl"]
+size = Vector2(51, 94.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6st"]
+size = Vector2(147.5, 186.49991)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
+size = Vector2(136, 54)
+
+[node name="Bedroom" type="Node2D" unique_id=22663307]
+script = ExtResource("1_8vs60")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1465262522]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1168277941]
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 1148.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.29006666, 0.13499343, 0.048283808, 1)
+theme_override_fonts/font = ExtResource("1_4vawo")
+theme_override_font_sizes/font_size = 40
+text = "Party starts in: 30 secs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1190478767]
+position = Vector2(6, 6)
+scale = Vector2(8, 8)
+texture = ExtResource("2_rmb8j")
+centered = false
+
+[node name="PartyTimer" type="Timer" parent="." unique_id=385218556]
+wait_time = 0.1
+autostart = true
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
+script = ExtResource("3_5x8wb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1098027657]
+position = Vector2(603.62506, 491.25)
+scale = Vector2(0.15512799, 0.14955357)
+texture = ExtResource("4_8vs60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
+position = Vector2(600.5, 492.25)
+shape = SubResource("RectangleShape2D_xfpcl")
+
+[node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
+script = ExtResource("5_flaea")
+
+[node name="Sprite2D" type="Sprite2D" parent="LaundryTask" unique_id=77462671]
+position = Vector2(106, 522)
+scale = Vector2(6.375, 6.25)
+texture = ExtResource("6_7jf5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryTask" unique_id=355324524]
+position = Vector2(105.25, 523.25)
+scale = Vector2(1, 1.0000005)
+shape = SubResource("RectangleShape2D_7o6st")
+
+[node name="InteractibleArea" type="Area2D" parent="LaundryTask" unique_id=2121717519]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryTask/InteractibleArea" unique_id=2108019962]
+position = Vector2(58, 17)
+shape = SubResource("RectangleShape2D_5x8wb")

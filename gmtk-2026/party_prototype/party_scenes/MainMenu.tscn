@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c76xabg1skrkc"]
+
+[ext_resource type="Texture2D" uid="uid://bmoqdtx67jkv3" path="res://party_prototype/party_assets/mainmenu_background.png" id="1_fihne"]
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_j8xxr"]
+
+[node name="Node2D" type="Node2D" unique_id=2131442120]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1831300659]
+offset_left = -5.0
+offset_top = 1.0
+offset_right = 1155.0
+offset_bottom = 651.0
+color = Color(0.9882353, 1, 1, 1)
+
+[node name="Balloons" type="Sprite2D" parent="." unique_id=870543132]
+position = Vector2(573, 329)
+texture = ExtResource("1_fihne")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=453242578]
+offset_left = 298.0
+offset_top = 79.0
+offset_right = 817.0
+offset_bottom = 331.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_j8xxr")
+theme_override_font_sizes/normal_font_size = 120
+text = "Party
+   Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=555218734]
+offset_left = -5.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 9.0
