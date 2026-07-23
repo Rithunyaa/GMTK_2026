@@ -14,6 +14,7 @@ func _input_event(_viewport, event, _shape_idx):
 			if event.pressed:
 				dragging = true
 				offset = global_position - get_global_mouse_position()
+				move_to_front()
 			else:
 				dragging = false
 
