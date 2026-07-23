@@ -9,26 +9,67 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_701n2"]
 size = Vector2(182.94855, 227.13214)
 
+[sub_resource type="Animation" id="Animation_y1wj7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_pbk0y"]
+resource_name = "clothes_collected"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8.5, 8.5), Vector2(8, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1wj7"]
+_data = {
+&"RESET": SubResource("Animation_y1wj7"),
+&"clothes_collected": SubResource("Animation_pbk0y")
+}
+
 [node name="CleanRoom" type="Node2D" unique_id=411623831]
 script = ExtResource("1_hmsfl")
 clothing_scene = ExtResource("2_pbk0y")
 
 [node name="Backgorund" type="Sprite2D" parent="." unique_id=1611582666]
+scale = Vector2(8, 8)
 texture = ExtResource("3_pbk0y")
 centered = false
 
 [node name="LaundryBasket" type="Area2D" parent="." unique_id=220298099]
-position = Vector2(581, 315)
-scale = Vector2(0.75431037, 0.7924901)
+position = Vector2(592, 312)
 script = ExtResource("3_y1wj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="LaundryBasket" unique_id=2005809352]
+scale = Vector2(8, 8)
 texture = ExtResource("1_lspg1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryBasket" unique_id=1407869486]
 position = Vector2(-5.3028564, 5.047394)
 scale = Vector2(1, 1.0000005)
 shape = SubResource("RectangleShape2D_701n2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LaundryBasket" unique_id=1362677339]
+libraries/ = SubResource("AnimationLibrary_y1wj7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=953796299]
 
