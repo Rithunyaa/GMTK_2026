@@ -1,6 +1,7 @@
 extends Node2D
 
-@export var clothing_scene: PackedScene
+@export var clothing_type_1: PackedScene
+@export var clothing_type_2: PackedScene
 @export var amount_of_clothes = 5
 var time_left = 30
 
@@ -17,7 +18,25 @@ func _ready():
 
 
 func spawn_clothes():
-	for i in range(amount_of_clothes):
+	var clothes_to_spawn = []
+
+	# Figure out who gets the extra clothing
+	if randi() % 2 == 0:
+		for i in range(3):
+			clothes_to_spawn.append(clothing_type_1)
+		for i in range(2):
+			clothes_to_spawn.append(clothing_type_2)
+	else:
+		for i in range(2):
+			clothes_to_spawn.append(clothing_type_1)
+		for i in range(3):
+			clothes_to_spawn.append(clothing_type_2)
+
+	# Randomize their order
+	clothes_to_spawn.shuffle()
+
+	# Spawn them
+	for clothing_scene in clothes_to_spawn:
 		var clothing = clothing_scene.instantiate()
 
 		var random_position = Vector2(
