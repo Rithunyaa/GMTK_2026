@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://dl1ygyobedop4" path="res://party_prototype/party_script/clothing.gd" id="1_a8qgq"]
 [ext_resource type="Texture2D" uid="uid://5sv86nlfs4rq" path="res://party_prototype/party_assets/clothingpile_2.png" id="2_a8qgq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1wj7"]
-size = Vector2(189, 150)
-
 [node name="Clothing1" type="Area2D" unique_id=2034316761]
 script = ExtResource("1_a8qgq")
 
@@ -14,6 +11,6 @@ scale = Vector2(8, 8)
 texture = ExtResource("2_a8qgq")
 hframes = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1709744054]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1384199609]
 position = Vector2(-1.5, 36)
-shape = SubResource("RectangleShape2D_y1wj7")
+polygon = PackedVector2Array(-13.5, -82, 54.5, -75, 90.5, -31, 95.5, 12, 110.5, 47, 86.5, 74, 37.5, 67, 21.5, 57, -13.5, 59, -43.5, 87, -108.5, 65, -117.5, 37, -72.5, -39)
