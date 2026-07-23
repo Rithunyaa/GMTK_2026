@@ -3,7 +3,7 @@ extends Node2D
 @export var clothing_type_1: PackedScene
 @export var clothing_type_2: PackedScene
 @export var amount_of_clothes = 5
-var time_left = 30
+var time_left = 30.0
 
 @onready var timer_label = $CanvasLayer/TimerLabel
 @onready var counter: Label = $CanvasLayer/ClothesCounter
@@ -72,13 +72,14 @@ func clothing_collected():
 		get_tree().paused = true
 
 func _on_party_timer_timeout():
-	time_left -= 1
-	
-	timer_label.text = "Party starts in: " + str(time_left)
+	time_left -= 0.1
 	
 	if time_left <= 0:
+		time_left = 0
 		print("You ran out of time!")
 		get_tree().paused = true
+	
+	update_timer()
 
 func update_counter():
 	counter.text = "Clothes Cleaned: " + str(cleaned_clothes) + "/" + str(amount_of_clothes)
@@ -104,3 +105,14 @@ func get_safe_spawn_position():
 
 		if basket_distance > 300 and not too_close_to_clothes:
 			return position
+
+func update_timer():
+	var minutes = int(time_left) / 60
+	var seconds = int(time_left) % 60
+	var milliseconds = int((time_left - int(time_left)) * 100)
+
+	timer_label.text = "Party starts in: %02d:%02d:%02d" % [
+		minutes,
+		seconds,
+		milliseconds
+	]

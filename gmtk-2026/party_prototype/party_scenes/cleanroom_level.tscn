@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ba2d3e84po70l" path="res://party_prototype/party_scenes/Clothing2.tscn" id="3_701n2"]
 [ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="3_pbk0y"]
 [ext_resource type="Script" uid="uid://davvhu5d68fma" path="res://party_prototype/party_script/laundry_basket.gd" id="3_y1wj7"]
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="7_701n2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1wj7"]
 size = Vector2(207, 244.99986)
@@ -76,18 +77,26 @@ libraries/ = SubResource("AnimationLibrary_y1wj7")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=953796299]
 
 [node name="ClothesCounter" type="Label" parent="CanvasLayer" unique_id=166915714]
+visible = false
 offset_left = 852.0
 offset_right = 1156.0
 offset_bottom = 89.0
 theme_override_font_sizes/font_size = 30
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1937865131]
-offset_right = 314.0
-offset_bottom = 58.0
-theme_override_font_sizes/font_size = 30
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 1148.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.29006666, 0.13499343, 0.048283808, 1)
+theme_override_fonts/font = ExtResource("7_701n2")
+theme_override_font_sizes/font_size = 40
 text = "Party starts in: 30 secs"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PartyTimer" type="Timer" parent="." unique_id=2012370698]
+wait_time = 0.1
 autostart = true
 
 [connection signal="area_entered" from="LaundryBasket" to="LaundryBasket" method="_on_area_entered"]

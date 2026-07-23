@@ -1,5 +1,6 @@
 extends Area2D
 
+@warning_ignore("unused_signal")
 signal collected
 
 @onready var sprite = $Sprite2D
@@ -19,9 +20,14 @@ func _input_event(_viewport, event, _shape_idx):
 				dragging = false
 
 
-func _process(_delta):
+@warning_ignore("unused_parameter")
+func _process(delta):
 	if dragging:
-		sprite.frame = 1
-		global_position = get_global_mouse_position() + offset
-	else:
-		sprite.frame = 0
+		var mouse_position = get_global_mouse_position()
+
+		var screen_size = get_viewport_rect().size
+
+		mouse_position.x = clamp(mouse_position.x, 0, screen_size.x)
+		mouse_position.y = clamp(mouse_position.y, 0, screen_size.y)
+
+		global_position = mouse_position + offset
