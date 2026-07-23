@@ -11,6 +11,7 @@ var time_left = 30
 
 var cleaned_clothes = 0
 var spawn_area = Rect2(100, 100, 950, 450)
+var spawned_positions = []
 
 
 
@@ -54,7 +55,10 @@ func spawn_clothes():
 		clothing.position = random_position
 		clothing.collected.connect(clothing_collected)
 
+		spawned_positions.append(random_position)
+
 		add_child(clothing)
+
 
 	laundry_basket.monitoring = true
 
@@ -87,8 +91,16 @@ func get_safe_spawn_position():
 			randf_range(spawn_area.position.x, spawn_area.end.x),
 			randf_range(spawn_area.position.y, spawn_area.end.y)
 		)
-		
-		var distance = position.distance_to(laundry_basket.position)
-		
-		if distance > 300:
+
+		var basket_distance = position.distance_to(laundry_basket.position)
+
+		var too_close_to_clothes = false
+
+		for old_position in spawned_positions:
+			if position.distance_to(old_position) < 100:
+				too_close_to_clothes = true
+				break
+
+
+		if basket_distance > 300 and not too_close_to_clothes:
 			return position
