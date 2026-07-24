@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="5_5x8wb"]
 [ext_resource type="Script" uid="uid://c7047r1w0rtw0" path="res://party_prototype/party_script/laundry_task.gd" id="5_flaea"]
 [ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="6_flaea"]
+[ext_resource type="Texture2D" uid="uid://dwqcnt6oul2wx" path="res://party_prototype/party_assets/character_walk_left.png" id="6_xfpcl"]
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_7jf5o"]
+[ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="7_7o6st"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfpcl"]
 size = Vector2(125, 193)
@@ -15,6 +17,14 @@ size = Vector2(125, 193)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vs60"]
 atlas = ExtResource("5_5x8wb")
 region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tx8a"]
+atlas = ExtResource("6_xfpcl")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ougwt"]
+atlas = ExtResource("7_7o6st")
+region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_flaea"]
 atlas = ExtResource("7_7jf5o")
@@ -34,6 +44,38 @@ region = Rect2(96, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_darn4"]
 atlas = ExtResource("6_flaea")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgwyt"]
+atlas = ExtResource("6_xfpcl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j4ry"]
+atlas = ExtResource("6_xfpcl")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mid8j"]
+atlas = ExtResource("6_xfpcl")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmqj1"]
+atlas = ExtResource("6_xfpcl")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypuw7"]
+atlas = ExtResource("7_7o6st")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drb8k"]
+atlas = ExtResource("7_7o6st")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppd5c"]
+atlas = ExtResource("7_7o6st")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp21q"]
+atlas = ExtResource("7_7o6st")
 region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fp2x3"]
@@ -64,6 +106,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7tx8a")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ougwt")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_flaea")
 }],
 "loop": false,
@@ -85,6 +143,40 @@ animations = [{
 }],
 "loop": false,
 "name": &"walk_down",
+"speed": 6.7
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgwyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j4ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mid8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmqj1")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 6.7
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypuw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drb8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppd5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp21q")
+}],
+"loop": true,
+"name": &"walk_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -102,14 +194,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"walk_up",
-"speed": 5.0
+"speed": 6.7
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
-size = Vector2(356, 269)
+size = Vector2(305, 269)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flaea"]
-size = Vector2(286, 354)
+size = Vector2(313, 278)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jf5o"]
 size = Vector2(161, 64)
@@ -124,7 +216,7 @@ size = Vector2(855, 48)
 size = Vector2(312, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3bd0"]
-size = Vector2(30.5, 365.5)
+size = Vector2(30.5, 478.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fp2x3"]
 size = Vector2(127, 157)
@@ -147,31 +239,39 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1190478767]
-position = Vector2(2, 1.9999962)
-scale = Vector2(9, 6.09)
+position = Vector2(576, 324)
+scale = Vector2(8, 8)
 texture = ExtResource("3_8vs60")
-centered = false
 
 [node name="PartyTimer" type="Timer" parent="." unique_id=385218556]
 wait_time = 0.1
 autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
+position = Vector2(587, 392)
 script = ExtResource("3_5x8wb")
+speed = 320
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
-position = Vector2(1085, 274)
 shape = SubResource("RectangleShape2D_xfpcl")
 debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
-position = Vector2(1084, 273.00003)
-scale = Vector2(9, 5.822)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_flaea")
 animation = &"walk_up"
 autoplay = "idle_down"
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1431017479]
+ignore_rotation = false
+limit_left = 0
+limit_top = -100
+limit_right = 1152
+limit_bottom = 748
+
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
+position = Vector2(40, 49)
 script = ExtResource("5_flaea")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LaundryTask" unique_id=1761808678]
@@ -182,7 +282,7 @@ polygon = PackedVector2Array(44, 443, 112, 417, 189, 415, 227, 437, 222, 616, 73
 [node name="InteractibleArea" type="Area2D" parent="LaundryTask" unique_id=2121717519]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryTask/InteractibleArea" unique_id=2108019962]
-position = Vector2(181, 514.5)
+position = Vector2(155.5, 514.5)
 shape = SubResource("RectangleShape2D_5x8wb")
 debug_color = Color(7.2196127e-07, 0.6488193, 0.17833564, 0.41960785)
 
@@ -196,33 +296,33 @@ polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.2
 [node name="Bed" type="StaticBody2D" parent="Furniture" unique_id=1204498530]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bed" unique_id=387534852]
-position = Vector2(133, 176)
+position = Vector2(146.5, 138)
 shape = SubResource("RectangleShape2D_flaea")
 
 [node name="Walls" type="StaticBody2D" parent="Furniture" unique_id=205301575]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Walls" unique_id=751758092]
-position = Vector2(357.5, 32)
+position = Vector2(357.5, -18)
 shape = SubResource("RectangleShape2D_7jf5o")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1246427529]
-position = Vector2(649, 21.5)
+position = Vector2(649, -30)
 shape = SubResource("RectangleShape2D_7o6st")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Furniture/Walls" unique_id=426869764]
-position = Vector2(428.5, 663)
+position = Vector2(446, 754)
 shape = SubResource("RectangleShape2D_oi3wf")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1636306674]
-position = Vector2(1000, 29.5)
+position = Vector2(1000, -10)
 shape = SubResource("RectangleShape2D_darn4")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1451693329]
-position = Vector2(1169.75, 350.25)
+position = Vector2(1113, 508.625)
 shape = SubResource("RectangleShape2D_e3bd0")
 
 [node name="Closet" type="StaticBody2D" parent="Furniture" unique_id=280728498]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Closet" unique_id=611210114]
-position = Vector2(1091.5, 97.5)
+position = Vector2(1052, 113)
 shape = SubResource("RectangleShape2D_fp2x3")

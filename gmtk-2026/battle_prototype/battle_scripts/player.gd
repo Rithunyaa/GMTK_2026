@@ -3,8 +3,14 @@ extends CharacterBody2D
 @export var speed = 200
 
 @onready var animated_sprite = $AnimatedSprite2D
-var facing_up = false
 
+enum DIRECTIONS{
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
+}
+var facing_direction = DIRECTIONS.DOWN
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
@@ -31,15 +37,28 @@ func _physics_process(delta):
 
 func update_animation(direction):
 	if direction.y > 0:
-		facing_up = false
+		facing_direction = DIRECTIONS.DOWN
 		animated_sprite.play("walk_down")
 
 	elif direction.y < 0:
-		facing_up = true
+		facing_direction = DIRECTIONS.UP
 		animated_sprite.play("walk_up")
+	
+	elif direction.x > 0:
+		facing_direction = DIRECTIONS.RIGHT
+		animated_sprite.play("walk_right")
+		
+	elif direction.x < 0:
+		facing_direction = DIRECTIONS.LEFT
+		animated_sprite.play("walk_left")
 
 	elif direction == Vector2.ZERO:
-		if facing_up:
-			animated_sprite.play("idle_up")
-		else:
-			animated_sprite.play("idle_down")
+		match facing_direction:
+			DIRECTIONS.UP:
+				animated_sprite.play("idle_up")
+			DIRECTIONS.DOWN:
+				animated_sprite.play("idle_down")
+			DIRECTIONS.LEFT:
+				animated_sprite.play("idle_left")
+			DIRECTIONS.RIGHT:
+				animated_sprite.play("idle_right")
