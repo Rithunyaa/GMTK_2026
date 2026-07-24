@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_7jf5o"]
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="7_7o6st"]
 [ext_resource type="Texture2D" uid="uid://dv4ybx0ion1xq" path="res://party_prototype/party_assets/laundry_taskpoint.png" id="11_7o6st"]
+[ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="12_oi3wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
 size = Vector2(305, 269)
@@ -335,3 +336,5 @@ shape = SubResource("RectangleShape2D_e3bd0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Closet" unique_id=611210114]
 position = Vector2(1052, 113)
 shape = SubResource("RectangleShape2D_fp2x3")
+
+[node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("12_oi3wf")]

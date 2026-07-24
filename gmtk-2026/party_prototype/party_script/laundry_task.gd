@@ -37,4 +37,5 @@ func _on_player_exited(body):
 
 
 func start_laundry_task():
+	await get_parent().get_node("DarkScreen").darker()
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/cleanroom_level.tscn")
