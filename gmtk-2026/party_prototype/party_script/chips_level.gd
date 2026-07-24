@@ -35,16 +35,7 @@ func spawn_chip(click_position):
 	chip.global_position = click_position
 
 
-func _on_chip_entered(area):
-	if not is_instance_valid(area):
-		return
 
-	if area.name == "Chip":
-		fill_line.position.y -= 10
-		
-		area.call_deferred("queue_free")
-
-		check_finished()
 		
 func check_finished():
 	if finished:
@@ -53,11 +44,19 @@ func check_finished():
 	if fill_line.global_position.y <= 640:
 		finished = true
 		print("Task Complete!")
-		go_to_kitchen()
+		call_deferred("go_to_kitchen")
 		
 func go_to_kitchen():
 	call_deferred("_change_scene")
+	
 
+func _on_chip_entered(area):
+	if area.name == "Chip":
+		fill_line.position.y -= 10
+		
+		area.call_deferred("queue_free")
+
+		check_finished()
 
 func _change_scene():
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/kitchen.tscn")

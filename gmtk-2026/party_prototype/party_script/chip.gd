@@ -30,5 +30,6 @@ func _on_area_entered(area):
 		var level = get_parent()
 
 		level.fill_line.position.y -= 10
+		level.check_finished()
 
 		queue_free()
