@@ -90,13 +90,13 @@ offset_left = 10.0
 offset_top = 580.0
 offset_right = 1148.0
 offset_bottom = 644.0
-theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21960784, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("7_701n2")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "[shake level=10]Party starts in: 30 secs"
+text = "[shake level=6]Party starts in: 30 secs"
 horizontal_alignment = 1
 vertical_alignment = 1
 

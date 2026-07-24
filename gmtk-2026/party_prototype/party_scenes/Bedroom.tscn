@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="7_7o6st"]
 [ext_resource type="Texture2D" uid="uid://dv4ybx0ion1xq" path="res://party_prototype/party_assets/laundry_taskpoint.png" id="11_7o6st"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="12_oi3wf"]
+[ext_resource type="Script" uid="uid://c0vi7tkuffin3" path="res://party_prototype/party_script/kitchen_transition.gd" id="13_darn4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
 size = Vector2(305, 269)
@@ -223,6 +224,9 @@ size = Vector2(30.5, 478.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fp2x3"]
 size = Vector2(127, 157)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4e3g"]
+size = Vector2(217, 124)
+
 [node name="Bedroom" type="Node2D" unique_id=22663307]
 script = ExtResource("1_8vs60")
 
@@ -233,13 +237,13 @@ offset_left = 10.0
 offset_top = 580.0
 offset_right = 1148.0
 offset_bottom = 644.0
-theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.2200064, 2.481742e-07, 6.016344e-08, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("1_4vawo")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "[shake level=10]Party starts in: 30 secs"
+text = "[shake level=6]Party starts in: 30 secs"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -279,7 +283,7 @@ scale = Vector2(1, 1.0000005)
 polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.24997, 118.75, -84.24997, 124.75, -40.25, 161.75, -24.25, 162.75, 10.75, 178.75, 41.75, 144.75, 60.74994, 119.75, 65.74994, 116.75, 83.74994, 93.75, 101.74994, 44.75, 100.74994, 23.75, 97.74994, -28.25, 101.74994, -90.25, 106.74994, -122.25, 75.74994, -38.25, 18.75, -63.25, -47.24997)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
-position = Vector2(587, 392)
+position = Vector2(373, 239)
 script = ExtResource("3_5x8wb")
 speed = 320
 metadata/_edit_group_ = true
@@ -291,7 +295,7 @@ debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_flaea")
-animation = &"walk_up"
+animation = &"idle_down"
 autoplay = "idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1431017479]
@@ -308,33 +312,49 @@ limit_bottom = 748
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bed" unique_id=387534852]
 position = Vector2(146.5, 138)
 shape = SubResource("RectangleShape2D_flaea")
+debug_color = Color(0.99969643, 0, 0.11943745, 0.41960785)
 
 [node name="Walls" type="StaticBody2D" parent="Furniture" unique_id=205301575]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Walls" unique_id=751758092]
 position = Vector2(357.5, -18)
 shape = SubResource("RectangleShape2D_7jf5o")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1246427529]
 position = Vector2(649, -30)
 shape = SubResource("RectangleShape2D_7o6st")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Furniture/Walls" unique_id=426869764]
 position = Vector2(446, 754)
 shape = SubResource("RectangleShape2D_oi3wf")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1636306674]
 position = Vector2(1000, -10)
 shape = SubResource("RectangleShape2D_darn4")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1451693329]
 position = Vector2(1113, 508.625)
 shape = SubResource("RectangleShape2D_e3bd0")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="Closet" type="StaticBody2D" parent="Furniture" unique_id=280728498]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Closet" unique_id=611210114]
 position = Vector2(1052, 113)
 shape = SubResource("RectangleShape2D_fp2x3")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("12_oi3wf")]
+
+[node name="KitchenTransition" type="Area2D" parent="." unique_id=2090343500]
+position = Vector2(0, 1)
+script = ExtResource("13_darn4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenTransition" unique_id=1628524904]
+position = Vector2(986.5, 752)
+shape = SubResource("RectangleShape2D_g4e3g")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)

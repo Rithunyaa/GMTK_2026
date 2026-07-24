@@ -99,7 +99,7 @@ func get_safe_spawn_position():
 
 
 func update_timer():
-	timer_label.text = "Party starts in: " + GameTimer.get_time_text()
+	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()
 
 
 
