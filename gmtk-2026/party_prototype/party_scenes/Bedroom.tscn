@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="7_7o6st"]
 [ext_resource type="Texture2D" uid="uid://dv4ybx0ion1xq" path="res://party_prototype/party_assets/laundry_taskpoint.png" id="11_7o6st"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
+size = Vector2(305, 269)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfpcl"]
 size = Vector2(125, 193)
 
@@ -198,9 +201,6 @@ animations = [{
 "speed": 6.7
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
-size = Vector2(305, 269)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flaea"]
 size = Vector2(313, 278)
 
@@ -251,29 +251,6 @@ texture = ExtResource("3_8vs60")
 wait_time = 0.1
 autostart = true
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
-position = Vector2(587, 392)
-script = ExtResource("3_5x8wb")
-speed = 320
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
-shape = SubResource("RectangleShape2D_xfpcl")
-debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
-scale = Vector2(8, 8)
-sprite_frames = SubResource("SpriteFrames_flaea")
-animation = &"walk_up"
-autoplay = "idle_down"
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1431017479]
-ignore_rotation = false
-limit_left = 0
-limit_top = -100
-limit_right = 1152
-limit_bottom = 748
-
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
 position = Vector2(40, 49)
 script = ExtResource("5_flaea")
@@ -299,6 +276,29 @@ debug_color = Color(7.2196127e-07, 0.6488193, 0.17833564, 0.41960785)
 position = Vector2(105.25, 523.25)
 scale = Vector2(1, 1.0000005)
 polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.24997, 118.75, -84.24997, 124.75, -40.25, 161.75, -24.25, 162.75, 10.75, 178.75, 41.75, 144.75, 60.74994, 119.75, 65.74994, 116.75, 83.74994, 93.75, 101.74994, 44.75, 100.74994, 23.75, 97.74994, -28.25, 101.74994, -90.25, 106.74994, -122.25, 75.74994, -38.25, 18.75, -63.25, -47.24997)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
+position = Vector2(587, 392)
+script = ExtResource("3_5x8wb")
+speed = 320
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
+shape = SubResource("RectangleShape2D_xfpcl")
+debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_flaea")
+animation = &"walk_up"
+autoplay = "idle_down"
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1431017479]
+ignore_rotation = false
+limit_left = 0
+limit_top = -100
+limit_right = 1152
+limit_bottom = 748
 
 [node name="Furniture" type="Node" parent="." unique_id=1783191440]
 

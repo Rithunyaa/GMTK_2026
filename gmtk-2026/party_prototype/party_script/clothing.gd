@@ -5,6 +5,8 @@ signal collected
 var dragging = false
 var offset = Vector2.ZERO
 
+@onready var sprite = $Sprite2D
+
 @onready var pickup_sound: AudioStreamPlayer2D = $PickUpSound
 @onready var drop_sound: AudioStreamPlayer2D = $DropSound
 
@@ -20,6 +22,10 @@ func _process(delta):
 		mouse_position.y = clamp(mouse_position.y, 0, screen_size.y)
 
 		global_position = mouse_position + offset
+		
+		sprite.frame = 1
+	else:
+		sprite.frame = 0
 
 
 @warning_ignore("unused_parameter")
