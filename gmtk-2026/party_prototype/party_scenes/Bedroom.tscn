@@ -218,7 +218,11 @@ size = Vector2(855, 48)
 size = Vector2(312, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3bd0"]
+<<<<<<< Updated upstream
 size = Vector2(30.5, 478.75)
+=======
+size = Vector2(35.5, 344.5)
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fp2x3"]
 size = Vector2(127, 157)
@@ -328,7 +332,11 @@ position = Vector2(1000, -10)
 shape = SubResource("RectangleShape2D_darn4")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1451693329]
+<<<<<<< Updated upstream
 position = Vector2(1113, 508.625)
+=======
+position = Vector2(1172.25, 339.75)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_e3bd0")
 
 [node name="Closet" type="StaticBody2D" parent="Furniture" unique_id=280728498]
