@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var timer_label: Label = $CanvasLayer/TimerLabel
+@onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
 
 
 func _ready():
@@ -9,4 +9,4 @@ func _ready():
 
 
 func update_timer():
-	timer_label.text = "Party starts in: " + GameTimer.get_time_text()
+	timer_label.text = "[shake level=10]Party starts in: " + GameTimer.get_time_text()

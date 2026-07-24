@@ -226,15 +226,18 @@ script = ExtResource("1_8vs60")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1465262522]
 
-[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1168277941]
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1104626461]
 offset_left = 10.0
 offset_top = 580.0
 offset_right = 1148.0
 offset_bottom = 644.0
-theme_override_colors/font_color = Color(0.29006666, 0.13499343, 0.048283808, 1)
-theme_override_fonts/font = ExtResource("1_4vawo")
-theme_override_font_sizes/font_size = 40
-text = "Party starts in: 30 secs"
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_4vawo")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[shake level=10]Party starts in: 30 secs"
 horizontal_alignment = 1
 vertical_alignment = 1
 
