@@ -2,20 +2,99 @@
 
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="1_4vawo"]
 [ext_resource type="Script" uid="uid://c7snwx1274ss0" path="res://party_prototype/party_script/bedroom.gd" id="1_8vs60"]
-[ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="2_rmb8j"]
 [ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_5x8wb"]
-[ext_resource type="Texture2D" uid="uid://dtwb6rnat4s71" path="res://battle_prototype/battle_assets/Character.png" id="4_8vs60"]
+[ext_resource type="Texture2D" uid="uid://d24wmi7tavtsl" path="res://party_prototype/party_assets/bedroom.png" id="3_8vs60"]
+[ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="5_5x8wb"]
 [ext_resource type="Script" uid="uid://c7047r1w0rtw0" path="res://party_prototype/party_script/laundry_task.gd" id="5_flaea"]
-[ext_resource type="Texture2D" uid="uid://ctl27aac3xwgi" path="res://party_prototype/party_assets/laundry_basket.png" id="6_7jf5o"]
+[ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="6_flaea"]
+[ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_7jf5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfpcl"]
 size = Vector2(51, 94.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6st"]
-size = Vector2(147.5, 186.49991)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vs60"]
+atlas = ExtResource("5_5x8wb")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfpcl"]
+atlas = ExtResource("6_flaea")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7o6st"]
+atlas = ExtResource("6_flaea")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi3wf"]
+atlas = ExtResource("6_flaea")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_darn4"]
+atlas = ExtResource("6_flaea")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp2x3"]
+atlas = ExtResource("7_7jf5o")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3bd0"]
+atlas = ExtResource("7_7jf5o")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4e3g"]
+atlas = ExtResource("7_7jf5o")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16ce0"]
+atlas = ExtResource("7_7jf5o")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_flaea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vs60")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfpcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7o6st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi3wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_darn4")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp2x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3bd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4e3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16ce0")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
-size = Vector2(330, 269)
+size = Vector2(356, 269)
 
 [node name="Bedroom" type="Node2D" unique_id=22663307]
 script = ExtResource("1_8vs60")
@@ -24,9 +103,9 @@ script = ExtResource("1_8vs60")
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1168277941]
 offset_left = 10.0
-offset_top = 5.0
+offset_top = 580.0
 offset_right = 1148.0
-offset_bottom = 69.0
+offset_bottom = 644.0
 theme_override_colors/font_color = Color(0.29006666, 0.13499343, 0.048283808, 1)
 theme_override_fonts/font = ExtResource("1_4vawo")
 theme_override_font_sizes/font_size = 40
@@ -35,9 +114,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1190478767]
-position = Vector2(6, 6)
-scale = Vector2(8, 8)
-texture = ExtResource("2_rmb8j")
+position = Vector2(2, 1.9999962)
+scale = Vector2(9, 6.09)
+texture = ExtResource("3_8vs60")
 centered = false
 
 [node name="PartyTimer" type="Timer" parent="." unique_id=385218556]
@@ -47,30 +126,29 @@ autostart = true
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
 script = ExtResource("3_5x8wb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1098027657]
-position = Vector2(573, 251)
-scale = Vector2(0.15512799, 0.14955357)
-texture = ExtResource("4_8vs60")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
 position = Vector2(565, 254)
 shape = SubResource("RectangleShape2D_xfpcl")
+debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
+position = Vector2(569, 213)
+scale = Vector2(9, 5.822)
+sprite_frames = SubResource("SpriteFrames_flaea")
+animation = &"walk_up"
+autoplay = "idle"
 
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
 script = ExtResource("5_flaea")
 
-[node name="Sprite2D" type="Sprite2D" parent="LaundryTask" unique_id=77462671]
-position = Vector2(106, 522)
-scale = Vector2(6.375, 6.25)
-texture = ExtResource("6_7jf5o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryTask" unique_id=355324524]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LaundryTask" unique_id=940249667]
 position = Vector2(105.25, 523.25)
 scale = Vector2(1, 1.0000005)
-shape = SubResource("RectangleShape2D_7o6st")
+polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.24997, 118.75, -84.24997, 124.75, -40.25, 161.75, -24.25, 162.75, 10.75, 178.75, 41.75, 144.75, 60.74994, 119.75, 65.74994, 116.75, 83.74994, 93.75, 101.74994, 44.75, 100.74994, 23.75, 97.74994, -28.25, 101.74994, -90.25, 106.74994, -122.25, 75.74994, -38.25, 18.75, -63.25, -47.24997)
 
 [node name="InteractibleArea" type="Area2D" parent="LaundryTask" unique_id=2121717519]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryTask/InteractibleArea" unique_id=2108019962]
-position = Vector2(168, 514.5)
+position = Vector2(181, 514.5)
 shape = SubResource("RectangleShape2D_5x8wb")
+debug_color = Color(7.2196127e-07, 0.6488193, 0.17833564, 0.41960785)

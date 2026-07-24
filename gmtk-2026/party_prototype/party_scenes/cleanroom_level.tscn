@@ -85,10 +85,10 @@ offset_bottom = 89.0
 theme_override_font_sizes/font_size = 30
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1937865131]
-offset_left = 10.0
-offset_top = 5.0
-offset_right = 1148.0
-offset_bottom = 69.0
+offset_left = 8.0
+offset_top = 572.0
+offset_right = 1146.0
+offset_bottom = 636.0
 theme_override_colors/font_color = Color(0.29006666, 0.13499343, 0.048283808, 1)
 theme_override_fonts/font = ExtResource("7_701n2")
 theme_override_font_sizes/font_size = 40
