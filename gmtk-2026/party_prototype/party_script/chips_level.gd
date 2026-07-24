@@ -6,6 +6,7 @@ extends Node2D
 @onready var red_line: Sprite2D = $RedLine
 @onready var fill_line: Line2D = $FillLine
 @onready var bowl_area: Area2D = $Bowl/BowlArea
+@onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
 
 
 var fill_amount = 0
@@ -15,6 +16,12 @@ var finished = false
 
 func _ready():
 	bowl_area.area_entered.connect(_on_chip_entered)
+	update_timer()
+	GameTimer.time_updated.connect(update_timer)
+
+
+func update_timer():
+	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()
 
 
 func _input(event):

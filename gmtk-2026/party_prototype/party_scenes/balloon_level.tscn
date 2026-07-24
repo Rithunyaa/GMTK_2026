@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cem5yafscs5qs"]
+
+[ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="1_a13e7"]
+
+[node name="InflateBalloons" type="Node2D" unique_id=1023644162]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=480760523]
+position = Vector2(576.5, 319.75)
+scale = Vector2(8.104167, 8.179012)
+texture = ExtResource("1_a13e7")
