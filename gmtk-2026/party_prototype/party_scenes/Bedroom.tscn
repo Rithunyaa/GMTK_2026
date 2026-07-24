@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_7jf5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfpcl"]
-size = Vector2(51, 94.5)
+size = Vector2(125, 193)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8vs60"]
 atlas = ExtResource("5_5x8wb")
@@ -108,6 +108,27 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
 size = Vector2(356, 269)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flaea"]
+size = Vector2(286, 354)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jf5o"]
+size = Vector2(161, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6st"]
+size = Vector2(422, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3wf"]
+size = Vector2(855, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_darn4"]
+size = Vector2(312, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3bd0"]
+size = Vector2(30.5, 365.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fp2x3"]
+size = Vector2(127, 157)
+
 [node name="Bedroom" type="Node2D" unique_id=22663307]
 script = ExtResource("1_8vs60")
 
@@ -139,12 +160,12 @@ autostart = true
 script = ExtResource("3_5x8wb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
-position = Vector2(565, 254)
+position = Vector2(1085, 274)
 shape = SubResource("RectangleShape2D_xfpcl")
 debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
-position = Vector2(569, 213)
+position = Vector2(1084, 273.00003)
 scale = Vector2(9, 5.822)
 sprite_frames = SubResource("SpriteFrames_flaea")
 animation = &"walk_up"
@@ -153,10 +174,10 @@ autoplay = "idle_down"
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
 script = ExtResource("5_flaea")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LaundryTask" unique_id=940249667]
-position = Vector2(105.25, 523.25)
-scale = Vector2(1, 1.0000005)
-polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.24997, 118.75, -84.24997, 124.75, -40.25, 161.75, -24.25, 162.75, 10.75, 178.75, 41.75, 144.75, 60.74994, 119.75, 65.74994, 116.75, 83.74994, 93.75, 101.74994, 44.75, 100.74994, 23.75, 97.74994, -28.25, 101.74994, -90.25, 106.74994, -122.25, 75.74994, -38.25, 18.75, -63.25, -47.24997)
+[node name="StaticBody2D" type="StaticBody2D" parent="LaundryTask" unique_id=1761808678]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LaundryTask/StaticBody2D" unique_id=1252276282]
+polygon = PackedVector2Array(44, 443, 112, 417, 189, 415, 227, 437, 222, 616, 73, 624)
 
 [node name="InteractibleArea" type="Area2D" parent="LaundryTask" unique_id=2121717519]
 
@@ -164,3 +185,44 @@ polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.2
 position = Vector2(181, 514.5)
 shape = SubResource("RectangleShape2D_5x8wb")
 debug_color = Color(7.2196127e-07, 0.6488193, 0.17833564, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LaundryTask" unique_id=940249667]
+position = Vector2(105.25, 523.25)
+scale = Vector2(1, 1.0000005)
+polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.24997, 118.75, -84.24997, 124.75, -40.25, 161.75, -24.25, 162.75, 10.75, 178.75, 41.75, 144.75, 60.74994, 119.75, 65.74994, 116.75, 83.74994, 93.75, 101.74994, 44.75, 100.74994, 23.75, 97.74994, -28.25, 101.74994, -90.25, 106.74994, -122.25, 75.74994, -38.25, 18.75, -63.25, -47.24997)
+
+[node name="Furniture" type="Node" parent="." unique_id=1783191440]
+
+[node name="Bed" type="StaticBody2D" parent="Furniture" unique_id=1204498530]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bed" unique_id=387534852]
+position = Vector2(133, 176)
+shape = SubResource("RectangleShape2D_flaea")
+
+[node name="Walls" type="StaticBody2D" parent="Furniture" unique_id=205301575]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Walls" unique_id=751758092]
+position = Vector2(357.5, 32)
+shape = SubResource("RectangleShape2D_7jf5o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1246427529]
+position = Vector2(649, 21.5)
+shape = SubResource("RectangleShape2D_7o6st")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Furniture/Walls" unique_id=426869764]
+position = Vector2(428.5, 663)
+shape = SubResource("RectangleShape2D_oi3wf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1636306674]
+position = Vector2(1000, 29.5)
+shape = SubResource("RectangleShape2D_darn4")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1451693329]
+position = Vector2(1169.75, 350.25)
+shape = SubResource("RectangleShape2D_e3bd0")
+
+[node name="Closet" type="StaticBody2D" parent="Furniture" unique_id=280728498]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Closet" unique_id=611210114]
+position = Vector2(1091.5, 97.5)
+shape = SubResource("RectangleShape2D_fp2x3")
