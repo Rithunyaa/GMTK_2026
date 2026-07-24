@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://npsekyioda25"]
+
+[ext_resource type="Texture2D" uid="uid://dyjuuudiwjmve" path="res://party_prototype/party_assets/kitchen_background.png" id="1_4vwy7"]
+[ext_resource type="Script" uid="uid://cx7wt82oylnpj" path="res://party_prototype/party_script/chips_level.gd" id="1_661nn"]
+[ext_resource type="Texture2D" uid="uid://cd5tocemdk0lb" path="res://party_prototype/party_assets/bowl.png" id="2_0ovbp"]
+[ext_resource type="PackedScene" uid="uid://c0gyg6lq6h6xn" path="res://party_prototype/party_scenes/Chip.tscn" id="2_wjwi8"]
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="3_uceqd"]
+[ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="4_661nn"]
+[ext_resource type="Texture2D" uid="uid://bxky786ob8rn0" path="res://party_prototype/party_assets/spotted_line.png" id="5_wjwi8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uceqd"]
+size = Vector2(29.9375, 1.3125)
+
+[node name="FillChipsBowl" type="Node2D" unique_id=1823313422]
+script = ExtResource("1_661nn")
+chip_scene = ExtResource("2_wjwi8")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=118717536]
+position = Vector2(576.5, 325.99997)
+scale = Vector2(8.034722, 8.074074)
+texture = ExtResource("1_4vwy7")
+
+[node name="Bowl" type="Sprite2D" parent="." unique_id=431347520]
+position = Vector2(523, 497)
+scale = Vector2(16, 16)
+texture = ExtResource("2_0ovbp")
+
+[node name="BowlArea" type="Area2D" parent="Bowl" unique_id=1605113220]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bowl/BowlArea" unique_id=369680185]
+position = Vector2(0.03125, -5.78125)
+shape = SubResource("RectangleShape2D_uceqd")
+debug_color = Color(0.93127424, 2.8300881e-05, 0.6554483, 0.41960785)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=15911850]
+
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=972744923]
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 1148.0
+offset_bottom = 73.0
+theme_override_colors/font_outline_color = Color(0.2200064, 2.481742e-07, 6.016344e-08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("3_uceqd")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[shake level=6]Party starts in: 30 secs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyTimer" type="Timer" parent="." unique_id=131452621]
+wait_time = 0.1
+autostart = true
+
+[node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("4_661nn")]
+
+[node name="RedLine" type="Sprite2D" parent="." unique_id=71952865]
+position = Vector2(574, 381)
+scale = Vector2(1, 2.6874998)
+texture = ExtResource("5_wjwi8")
+
+[node name="FillLine" type="Line2D" parent="." unique_id=1351180756]
+z_index = 10
+position = Vector2(1548.0002, 825.9999)
+scale = Vector2(8.430598, 23.949976)
+points = PackedVector2Array(-148.863, -10, -94.77384, -9.770361)
+width = 1.0
+default_color = Color(0.35315913, 0.26401472, 0.08896316, 1)

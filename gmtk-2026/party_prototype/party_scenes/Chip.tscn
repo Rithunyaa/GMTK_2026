@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c0gyg6lq6h6xn"]
+
+[ext_resource type="Texture2D" uid="uid://dw1neoyo6venr" path="res://party_prototype/party_assets/chip_1.png" id="1_yexlf"]
+[ext_resource type="Script" uid="uid://safie77cxqjh" path="res://party_prototype/party_script/chip.gd" id="1_ys3nu"]
+[ext_resource type="Texture2D" uid="uid://cm6gtk1frejrt" path="res://party_prototype/party_assets/chip_2.png" id="3_hhb4s"]
+[ext_resource type="Texture2D" uid="uid://cql552l06xgtl" path="res://party_prototype/party_assets/chip_3.png" id="4_dspjy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ts45"]
+radius = 31.144823
+
+[node name="Chip" type="Area2D" unique_id=374993856]
+script = ExtResource("1_ys3nu")
+chip_sprites = Array[Texture2D]([ExtResource("4_dspjy"), ExtResource("3_hhb4s"), ExtResource("1_yexlf")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1145976562]
+scale = Vector2(8, 8)
+texture = ExtResource("1_yexlf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1067044785]
+shape = SubResource("CircleShape2D_5ts45")

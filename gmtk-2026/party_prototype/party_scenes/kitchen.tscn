@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfefsflfn6eac"]
 
 [ext_resource type="Texture2D" uid="uid://cyeqyy0i3ldgu" path="res://party_prototype/party_assets/kitchen.png" id="1_dxbdb"]
+[ext_resource type="Script" uid="uid://cony8u2ynhpf0" path="res://party_prototype/party_script/kitchen.gd" id="1_nj3nl"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_8sbsv"]
 [ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_hjr6m"]
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="4_lwwot"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="9_met58"]
 [ext_resource type="Script" uid="uid://ciawo4cul50pw" path="res://party_prototype/party_script/bedroom_transition.gd" id="10_hjr6m"]
 [ext_resource type="Texture2D" uid="uid://ej0sflwjj7wr" path="res://party_prototype/party_assets/chips_preparing_taskpoint.png" id="11_lwwot"]
+[ext_resource type="Script" uid="uid://7hdov5mqmqn8" path="res://party_prototype/party_script/chips_task.gd" id="12_h5vr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7pri"]
 size = Vector2(125, 193)
@@ -222,7 +224,11 @@ size = Vector2(256, 51)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_met58"]
 size = Vector2(208, 217)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1wrbj"]
+radius = 57.48913
+
 [node name="Kitchen" type="Node2D" unique_id=2098177614]
+script = ExtResource("1_nj3nl")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1477879727]
 position = Vector2(575.5, 325)
@@ -319,7 +325,15 @@ position = Vector2(109, 108.5)
 shape = SubResource("RectangleShape2D_met58")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 
-[node name="ChipsPreparingTaskpoint" type="Sprite2D" parent="." unique_id=615397809]
-position = Vector2(895.00006, 375.00003)
+[node name="ChipsTask" type="Area2D" parent="." unique_id=1680379520]
+script = ExtResource("12_h5vr8")
+
+[node name="Sprite2D" type="Sprite2D" parent="ChipsTask" unique_id=433985781]
+position = Vector2(895, 375)
 scale = Vector2(6, 6)
 texture = ExtResource("11_lwwot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChipsTask" unique_id=1836540843]
+position = Vector2(897, 376)
+shape = SubResource("CircleShape2D_1wrbj")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
