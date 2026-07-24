@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwqcnt6oul2wx" path="res://party_prototype/party_assets/character_walk_left.png" id="6_xfpcl"]
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_7jf5o"]
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="7_7o6st"]
+[ext_resource type="Texture2D" uid="uid://dv4ybx0ion1xq" path="res://party_prototype/party_assets/laundry_taskpoint.png" id="11_7o6st"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfpcl"]
 size = Vector2(125, 193)
@@ -276,6 +277,11 @@ limit_bottom = 748
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
 position = Vector2(40, 49)
 script = ExtResource("5_flaea")
+
+[node name="Sprite2D" type="Sprite2D" parent="LaundryTask" unique_id=1818919507]
+position = Vector2(160, 535)
+scale = Vector2(8, 8)
+texture = ExtResource("11_7o6st")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LaundryTask" unique_id=1761808678]
 
