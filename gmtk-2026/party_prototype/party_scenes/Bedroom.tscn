@@ -15,7 +15,7 @@ size = Vector2(51, 94.5)
 size = Vector2(147.5, 186.49991)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
-size = Vector2(136, 54)
+size = Vector2(330, 269)
 
 [node name="Bedroom" type="Node2D" unique_id=22663307]
 script = ExtResource("1_8vs60")
@@ -48,12 +48,12 @@ autostart = true
 script = ExtResource("3_5x8wb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1098027657]
-position = Vector2(603.62506, 491.25)
+position = Vector2(573, 251)
 scale = Vector2(0.15512799, 0.14955357)
 texture = ExtResource("4_8vs60")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
-position = Vector2(600.5, 492.25)
+position = Vector2(565, 254)
 shape = SubResource("RectangleShape2D_xfpcl")
 
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
@@ -72,5 +72,5 @@ shape = SubResource("RectangleShape2D_7o6st")
 [node name="InteractibleArea" type="Area2D" parent="LaundryTask" unique_id=2121717519]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LaundryTask/InteractibleArea" unique_id=2108019962]
-position = Vector2(58, 17)
+position = Vector2(168, 514.5)
 shape = SubResource("RectangleShape2D_5x8wb")
