@@ -1,39 +1,45 @@
 extends CharacterBody2D
 
-# Player movement speed
-@export var speed: float = 200.0
+@export var speed = 200
 
-var inventory = {
-	"attack": 0,
-	"health": 0,
-	"shield": 0
-}
+@onready var animated_sprite = $AnimatedSprite2D
+var facing_up = false
 
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction = Vector2.ZERO
 
-	# WASD movement
 	if Input.is_action_pressed("walk_right"):
-		direction.x += 10
+		direction.x += 1
 
 	if Input.is_action_pressed("walk_left"):
-		direction.x -= 10
-		
+		direction.x -= 1
 
 	if Input.is_action_pressed("walk_down"):
-		direction.y += 10
-		
+		direction.y += 1
 
 	if Input.is_action_pressed("walk_up"):
-		direction.y -= 10
-		
+		direction.y -= 1
 
-	# Prevent faster diagonal movement
-	if direction.length() > 0:
-		direction = direction.normalized()
-
-	# Apply movement
-	velocity = direction * speed
-
+	velocity = direction.normalized() * speed
 	move_and_slide()
+
+	update_animation(direction)
+
+
+
+func update_animation(direction):
+	if direction.y > 0:
+		facing_up = false
+		animated_sprite.play("walk_down")
+
+	elif direction.y < 0:
+		facing_up = true
+		animated_sprite.play("walk_up")
+
+	elif direction == Vector2.ZERO:
+		if facing_up:
+			animated_sprite.play("idle_up")
+		else:
+			animated_sprite.play("idle_down")

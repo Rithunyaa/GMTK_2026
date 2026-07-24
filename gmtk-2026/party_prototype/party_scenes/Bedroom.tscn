@@ -16,6 +16,10 @@ size = Vector2(51, 94.5)
 atlas = ExtResource("5_5x8wb")
 region = Rect2(16, 0, 16, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_flaea"]
+atlas = ExtResource("7_7jf5o")
+region = Rect2(48, 0, 48, 48)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xfpcl"]
 atlas = ExtResource("6_flaea")
 region = Rect2(0, 0, 48, 48)
@@ -55,7 +59,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_8vs60")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flaea")
+}],
+"loop": false,
+"name": &"idle_up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -71,7 +83,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_darn4")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -88,7 +100,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_16ce0")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_up",
 "speed": 5.0
 }]
@@ -136,7 +148,7 @@ position = Vector2(569, 213)
 scale = Vector2(9, 5.822)
 sprite_frames = SubResource("SpriteFrames_flaea")
 animation = &"walk_up"
-autoplay = "idle"
+autoplay = "idle_down"
 
 [node name="LaundryTask" type="Area2D" parent="." unique_id=1425824481]
 script = ExtResource("5_flaea")
