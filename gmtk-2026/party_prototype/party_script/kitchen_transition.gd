@@ -1,20 +1,16 @@
-extends Node2D
-
-@onready var timer_label: RichTextLabel = $"../CanvasLayer/TimerLabel"
+extends Area2D
 
 
 func _ready():
-	update_timer()
-	GameTimer.time_updated.connect(update_timer)
-	
-
-	var player: CharacterBody2D = $"../Player"
-
-	match GameManager.previous_scene:
-		"chips_task": player.position = Vector2(805,392)
-	
-	GameManager.previous_scene = "kitchen"
+	body_entered.connect(_on_body_entered)
 
 
-func update_timer():
-	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()
+func _on_body_entered(body):
+	if body.name == "Player":
+		set_deferred("monitoring", false)
+		call_deferred("_go_to_kitchen")
+
+
+func _go_to_kitchen():
+	await get_parent().get_node("DarkScreen").darker()
+	get_tree().change_scene_to_file("res://party_prototype/party_scenes/kitchen.tscn")

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://cony8u2ynhpf0" path="res://party_prototype/party_script/kitchen.gd" id="1_nj3nl"]
 [ext_resource type="Texture2D" uid="uid://xwl0sft6iqho" path="res://party_prototype/party_assets/kitchen_front_scene.png" id="2_1wrbj"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_8sbsv"]
-[ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_hjr6m"]
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="4_lwwot"]
+[ext_resource type="Script" uid="uid://bavajfqgjojdw" path="res://party_prototype/party_script/player.gd" id="5_1wrbj"]
 [ext_resource type="Texture2D" uid="uid://dwqcnt6oul2wx" path="res://party_prototype/party_assets/character_walk_left.png" id="5_nj3nl"]
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="6_h5vr8"]
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_1wrbj"]
@@ -277,7 +277,7 @@ autostart = true
 [node name="Player" type="CharacterBody2D" parent="." unique_id=585826072]
 z_index = 2
 position = Vector2(116, 176)
-script = ExtResource("3_hjr6m")
+script = ExtResource("5_1wrbj")
 speed = 320
 metadata/_edit_group_ = true
 

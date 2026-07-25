@@ -14,7 +14,7 @@ var spawned_positions = []
 
 
 func _ready():
-	GameManager.previous_scene = "laundry_task"
+	GameTimer.previous_scene = "laundry_task"
 	
 	spawn_clothes()
 	update_timer()

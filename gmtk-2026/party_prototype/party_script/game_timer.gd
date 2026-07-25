@@ -5,6 +5,7 @@ signal time_finished
 
 var time_left = 60.0
 var running = true
+var previous_scene: String = ""
 
 
 func _process(delta):
@@ -29,3 +30,5 @@ func get_time_text():
 		minutes,
 		seconds
 	]
+	
+	

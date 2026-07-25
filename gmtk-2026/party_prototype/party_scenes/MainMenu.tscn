@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c76xabg1skrkc"]
 
+[ext_resource type="Script" uid="uid://c3aqf78rmv6ni" path="res://party_prototype/party_script/main_menu.gd" id="1_dnkel"]
 [ext_resource type="Texture2D" uid="uid://bmoqdtx67jkv3" path="res://party_prototype/party_assets/mainmenu_background.png" id="1_fihne"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_j8xxr"]
 [ext_resource type="Texture2D" uid="uid://dncoibvcfqx6x" path="res://party_prototype/party_assets/mainmenu_middleground.png" id="2_ohmug"]
 [ext_resource type="Texture2D" uid="uid://cyi2wg2g88reo" path="res://party_prototype/party_assets/mainmenu_frontground.png" id="3_ohmug"]
 
-[node name="Node2D" type="Node2D" unique_id=2131442120]
+[node name="MainMenu" type="Node2D" unique_id=2131442120]
+script = ExtResource("1_dnkel")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=870543132]
 texture = ExtResource("1_fihne")
@@ -58,9 +60,3 @@ bbcode_enabled = true
 text = "[wave]Press any key"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Button" type="Button" parent="." unique_id=555218734]
-offset_left = -5.0
-offset_top = 1.0
-offset_right = 3.0
-offset_bottom = 9.0

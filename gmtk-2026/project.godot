@@ -12,12 +12,12 @@ config_version=5
 
 config/name="GMTK_2026"
 config/tags=PackedStringArray("game_jam")
+run/main_scene="uid://c76xabg1skrkc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="uid://34nd6n44v1mk"
 GameTimer="*uid://dyf76inijwokv"
 
 [display]

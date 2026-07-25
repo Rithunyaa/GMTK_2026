@@ -9,10 +9,10 @@ func _ready():
 	
 	var player := $Player
 	
-	match GameManager.previous_scene:
+	match GameTimer.previous_scene:
 		"chips_task": player.position = Vector2(805,392)
 	
-	GameManager.previous_scene = "kitchen"
+	GameTimer.previous_scene = "kitchen"
 
 
 func update_timer():

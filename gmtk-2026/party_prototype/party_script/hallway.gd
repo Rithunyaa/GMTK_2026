@@ -8,10 +8,10 @@ func _ready():
 	GameTimer.time_updated.connect(update_timer)
 	
 	var player := $Player
-	match GameManager.previous_scene:
+	match GameTimer.previous_scene:
 		"kitchen":  player.position = Vector2(1100,523)
 	
-	GameManager.previous_scene = "hallway"
+	GameTimer.previous_scene = "hallway"
 
 func update_timer():
 	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()
