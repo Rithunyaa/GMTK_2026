@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://dap2ffdwumtk4"]
 
-[ext_resource type="Script" uid="uid://dgw0f3kqv2q3l" path="res://party_prototype/party_script/balloon_level.gd" id="1_x1nrs"]
-[ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="3_3thwb"]
+[ext_resource type="Script" path="res://party_prototype/party_script/balloon_level.gd" id="1_x1nrs"]
+[ext_resource type="Texture2D" uid="uid://cyqvbk4s3idkr" path="res://party_prototype/party_assets/livingroom_background.png" id="2_8w6ge"]
 [ext_resource type="PackedScene" uid="uid://cem5yafscs5qs" path="res://party_prototype/party_scenes/balloon.tscn" id="5_8w6ge"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="5_ri163"]
+[ext_resource type="Texture2D" uid="uid://buynym7oagnrs" path="res://party_prototype/party_assets/balloon_level/balloon_2.png" id="6_7vjgf"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="6_loa77"]
+[ext_resource type="Texture2D" uid="uid://cxs7hbf6wcw7a" path="res://party_prototype/party_assets/balloon_level/balloon_3.png" id="7_lpwqg"]
 
 [node name="InflateBalloons" type="Node2D" unique_id=1023644162]
 script = ExtResource("1_x1nrs")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2134861155]
-position = Vector2(566, 334)
-scale = Vector2(8.180556, 8.333334)
-texture = ExtResource("3_3thwb")
+scale = Vector2(8, 8)
+texture = ExtResource("2_8w6ge")
+centered = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1735081987]
 
@@ -43,5 +45,14 @@ position = Vector2(187, 300)
 [node name="Balloon2" parent="." unique_id=1490684845 instance=ExtResource("5_8w6ge")]
 position = Vector2(558, 303)
 
+[node name="Balloon" parent="Balloon2" index="2" unique_id=893512970]
+texture = ExtResource("6_7vjgf")
+
 [node name="Balloon3" parent="." unique_id=1702861073 instance=ExtResource("5_8w6ge")]
 position = Vector2(913, 285)
+
+[node name="Balloon" parent="Balloon3" index="2" unique_id=893512970]
+texture = ExtResource("7_lpwqg")
+
+[editable path="Balloon2"]
+[editable path="Balloon3"]

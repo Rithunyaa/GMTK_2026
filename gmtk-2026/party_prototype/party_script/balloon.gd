@@ -2,8 +2,8 @@ extends Node2D
 signal balloon_completed
 
 @onready var balloon = $Balloon
-@onready var green_zone = $GreenZone
-
+#@onready var green_zone = $GreenZone
+@onready var circle = $Circle
 
 var balloon_size = 0.5
 var growth_speed = 1
@@ -25,7 +25,8 @@ var completed = false
 
 
 func _ready():
-	green_zone.visible = false
+	#green_zone.visible = false
+	circle.frame = 0
 
 
 
@@ -50,19 +51,21 @@ func _process(delta):
 
 
 	balloon.scale = Vector2(
-		balloon_size,
-		balloon_size
+		balloon_size*8,
+		balloon_size*8
 	)
 
 
 	# Check if balloon is in the green zone
 	if balloon_size >= good_min_size and balloon_size <= good_max_size:
 		can_click = true
-		green_zone.visible = true
+		#green_zone.visible = true
+		circle.frame = 1
 
 	else:
 		can_click = false
-		green_zone.visible = false
+		#green_zone.visible = false
+		circle.frame = 0
 
 
 
@@ -94,7 +97,8 @@ func success():
 
 	can_click = false
 
-	green_zone.visible = false
+	#green_zone.visible = false
+	circle.frame = 1
 
 	# Tell the main level this balloon is done
 	balloon_completed.emit()
@@ -110,8 +114,9 @@ func fail():
 		balloon_size = min_size
 
 		balloon.scale = Vector2(
-			balloon_size,
-			balloon_size
+			balloon_size*8,
+			balloon_size*8
 		)
 
-		green_zone.visible = false
+		#green_zone.visible = false
+		circle.frame = 0

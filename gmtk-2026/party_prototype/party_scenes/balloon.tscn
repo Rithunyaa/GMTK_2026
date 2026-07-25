@@ -2,25 +2,37 @@
 
 [ext_resource type="Script" uid="uid://bihn58am1lb0t" path="res://party_prototype/party_script/balloon.gd" id="1_simt1"]
 [ext_resource type="Texture2D" uid="uid://cctpt7sdw7ckr" path="res://party_prototype/party_assets/balloon_level/circle.png" id="2_v4nna"]
-[ext_resource type="Texture2D" uid="uid://cluuq2bl1ebnu" path="res://party_prototype/party_assets/balloon_level/balloon.png" id="4_ccmsq"]
+[ext_resource type="Texture2D" uid="uid://da1wi5hen5c8b" path="res://party_prototype/party_assets/balloon_level/balloon_1.png" id="3_simt1"]
+[ext_resource type="Texture2D" uid="uid://b4en5qaco5kv7" path="res://party_prototype/party_assets/balloon_level/balloon_circle.png" id="5_jnyw0"]
 [ext_resource type="Texture2D" uid="uid://cymb2yp4au1ow" path="res://party_prototype/party_assets/balloon_level/green_zone.png" id="7_8b4vn"]
 
 [node name="Balloon" type="Node2D" unique_id=1023644162]
 script = ExtResource("1_simt1")
 
 [node name="InnerCircle" type="Sprite2D" parent="." unique_id=2068144766]
+visible = false
 z_index = 10
 scale = Vector2(1.5, 1.401)
 texture = ExtResource("2_v4nna")
 
 [node name="OuterCircle" type="Sprite2D" parent="." unique_id=1884608525]
+visible = false
 z_index = 10
 scale = Vector2(2, 1.872)
 texture = ExtResource("2_v4nna")
 
 [node name="Balloon" type="Sprite2D" parent="." unique_id=893512970]
-texture = ExtResource("4_ccmsq")
+position = Vector2(0, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("3_simt1")
 
 [node name="GreenZone" type="Sprite2D" parent="." unique_id=1909879713]
+visible = false
 scale = Vector2(1.9938272, 1.8402065)
 texture = ExtResource("7_8b4vn")
+
+[node name="Circle" type="Sprite2D" parent="." unique_id=419143204]
+position = Vector2(0, 32)
+scale = Vector2(8, 8)
+texture = ExtResource("5_jnyw0")
+hframes = 2
