@@ -43,13 +43,13 @@ autostart = true
 position = Vector2(187, 300)
 
 [node name="Balloon2" parent="." unique_id=1490684845 instance=ExtResource("5_8w6ge")]
-position = Vector2(558, 303)
+position = Vector2(558, 300)
 
 [node name="Balloon" parent="Balloon2" index="2" unique_id=893512970]
 texture = ExtResource("6_7vjgf")
 
 [node name="Balloon3" parent="." unique_id=1702861073 instance=ExtResource("5_8w6ge")]
-position = Vector2(913, 285)
+position = Vector2(913, 300)
 
 [node name="Balloon" parent="Balloon3" index="2" unique_id=893512970]
 texture = ExtResource("7_lpwqg")
