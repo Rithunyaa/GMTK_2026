@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_q0b67"]
 [ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="8_ktn3y"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="9_070ry"]
+[ext_resource type="Script" uid="uid://b07d1jf0jkth" path="res://party_prototype/party_script/balloon_task.gd" id="10_0bukb"]
+[ext_resource type="Texture2D" uid="uid://ck78xiklbdyya" path="res://party_prototype/party_assets/balloon_level/balloon_taskpoint.png" id="11_034er"]
+[ext_resource type="Script" uid="uid://bbow1hb1u4tm4" path="res://party_prototype/party_script/hallway_transition.gd" id="12_034er"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7fil"]
 size = Vector2(125, 193)
@@ -235,6 +238,12 @@ size = Vector2(135, 103)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iuls3"]
 size = Vector2(33, 118)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wxv7u"]
+radius = 69.92139
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8u2te"]
+size = Vector2(55, 235)
+
 [node name="LivingRoom" type="Node2D" unique_id=1359939338]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=244107022]
@@ -260,7 +269,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1931515992]
-position = Vector2(761, 156)
+position = Vector2(308, 1205)
 script = ExtResource("3_mh50a")
 speed = 320
 metadata/_edit_group_ = true
@@ -377,3 +386,29 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 position = Vector2(1484, 46)
 shape = SubResource("RectangleShape2D_iuls3")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
+
+[node name="BalloonTask" type="Area2D" parent="." unique_id=211737761]
+position = Vector2(1484, 46)
+script = ExtResource("10_0bukb")
+
+[node name="Sprite2D" type="Sprite2D" parent="BalloonTask" unique_id=280611102]
+position = Vector2(-248, 352)
+scale = Vector2(8, 8)
+texture = ExtResource("11_034er")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BalloonTask" unique_id=336809154]
+position = Vector2(-251, 357)
+shape = SubResource("CircleShape2D_wxv7u")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
+
+[node name="PartyTimer" type="Timer" parent="." unique_id=1072235206]
+wait_time = 0.1
+autostart = true
+
+[node name="Hallway_Transition" type="Area2D" parent="." unique_id=671609796]
+script = ExtResource("12_034er")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hallway_Transition" unique_id=1675065449]
+position = Vector2(609.5, 1231.5)
+shape = SubResource("RectangleShape2D_8u2te")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
