@@ -8,6 +8,7 @@ func _ready():
 
 ## fade out
 func darker():
+	visible = true
 	animation.play("darker")
 	await animation.current_animation_changed
 
