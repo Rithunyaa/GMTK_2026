@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="5_6t4nt"]
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="6_1aij1"]
 [ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="7_baffk"]
+[ext_resource type="Script" uid="uid://ciawo4cul50pw" path="res://party_prototype/party_script/bedroom_transition.gd" id="8_2cbao"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="9_attww"]
+[ext_resource type="Script" uid="uid://c0vi7tkuffin3" path="res://party_prototype/party_script/kitchen_transition.gd" id="11_1aij1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6r7v0"]
 size = Vector2(125, 193)
@@ -209,6 +211,12 @@ size = Vector2(253, 483.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_attww"]
 size = Vector2(993, 207)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_baffk"]
+size = Vector2(224.5, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qflsh"]
+size = Vector2(208, 75)
+
 [node name="Hallway" type="Node2D" unique_id=1107556205]
 script = ExtResource("1_6t4nt")
 
@@ -297,3 +305,20 @@ shape = SubResource("RectangleShape2D_attww")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("9_attww")]
+
+[node name="KitchenTransition" type="Area2D" parent="." unique_id=316261041]
+position = Vector2(0, 1)
+script = ExtResource("11_1aij1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenTransition" unique_id=538412623]
+position = Vector2(1088.75, 698)
+shape = SubResource("RectangleShape2D_baffk")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
+
+[node name="BedroomTransition" type="Area2D" parent="." unique_id=471074369]
+script = ExtResource("8_2cbao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedroomTransition" unique_id=1661705425]
+position = Vector2(1771, 94)
+shape = SubResource("RectangleShape2D_qflsh")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)

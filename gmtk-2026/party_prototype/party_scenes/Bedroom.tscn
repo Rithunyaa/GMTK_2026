@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="7_7o6st"]
 [ext_resource type="Texture2D" uid="uid://dv4ybx0ion1xq" path="res://party_prototype/party_assets/laundry_level/laundry_taskpoint.png" id="11_7o6st"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="12_oi3wf"]
-[ext_resource type="Script" uid="uid://c0vi7tkuffin3" path="res://party_prototype/party_script/kitchen_transition.gd" id="13_darn4"]
+[ext_resource type="Script" uid="uid://bbow1hb1u4tm4" path="res://party_prototype/party_script/hallway_transition.gd" id="13_darn4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x8wb"]
 size = Vector2(305, 269)
@@ -358,11 +358,11 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("12_oi3wf")]
 
-[node name="KitchenTransition" type="Area2D" parent="." unique_id=2090343500]
+[node name="HallwayTransition" type="Area2D" parent="." unique_id=2090343500]
 position = Vector2(0, 1)
 script = ExtResource("13_darn4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenTransition" unique_id=1628524904]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HallwayTransition" unique_id=1628524904]
 position = Vector2(986.5, 752)
 shape = SubResource("RectangleShape2D_g4e3g")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)

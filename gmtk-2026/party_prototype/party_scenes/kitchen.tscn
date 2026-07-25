@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="7_1wrbj"]
 [ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="8_15j66"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="9_met58"]
-[ext_resource type="Script" uid="uid://ciawo4cul50pw" path="res://party_prototype/party_script/bedroom_transition.gd" id="10_hjr6m"]
 [ext_resource type="Texture2D" uid="uid://ej0sflwjj7wr" path="res://party_prototype/party_assets/chip_level/chips_preparing_taskpoint.png" id="11_lwwot"]
+[ext_resource type="Script" uid="uid://bbow1hb1u4tm4" path="res://party_prototype/party_script/hallway_transition.gd" id="12_1wrbj"]
 [ext_resource type="Script" uid="uid://7hdov5mqmqn8" path="res://party_prototype/party_script/chips_task.gd" id="12_h5vr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7pri"]
@@ -349,10 +349,10 @@ position = Vector2(195.5, 676.5)
 shape = SubResource("RectangleShape2D_wm35n")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
-[node name="BedroomTransition" type="Area2D" parent="." unique_id=983269887]
-script = ExtResource("10_hjr6m")
+[node name="HallwayTransition" type="Area2D" parent="." unique_id=983269887]
+script = ExtResource("12_1wrbj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BedroomTransition" unique_id=749936752]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HallwayTransition" unique_id=749936752]
 position = Vector2(109, 37.5)
 shape = SubResource("RectangleShape2D_met58")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
