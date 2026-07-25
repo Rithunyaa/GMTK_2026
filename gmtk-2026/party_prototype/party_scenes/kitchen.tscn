@@ -202,31 +202,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sbsv"]
-size = Vector2(649, 107)
+size = Vector2(1029, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjr6m"]
-size = Vector2(59, 315.5)
+size = Vector2(97, 276.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwwot"]
 size = Vector2(239, 98.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj3nl"]
-size = Vector2(46.5, 596)
+size = Vector2(46.5, 758)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5vr8"]
-size = Vector2(1157.5, 50)
+size = Vector2(1299.75, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wrbj"]
-size = Vector2(37, 714)
+size = Vector2(37, 788)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15j66"]
-size = Vector2(256, 51)
+size = Vector2(256, 65.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wm35n"]
-size = Vector2(149, 110)
+size = Vector2(103, 129)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_met58"]
-size = Vector2(208, 64)
+size = Vector2(208, 75)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wrbj"]
 radius = 57.48913
@@ -243,14 +243,14 @@ color = Color(0, 0, 0, 1)
 
 [node name="KitchenFrontScene" type="Sprite2D" parent="." unique_id=1457916040]
 z_index = 10
-position = Vector2(513, 306.99997)
 scale = Vector2(8, 8)
 texture = ExtResource("2_1wrbj")
+centered = false
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1477879727]
-position = Vector2(575.5, 325)
 scale = Vector2(8, 8)
 texture = ExtResource("1_dxbdb")
+centered = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=957145815]
 
@@ -275,7 +275,7 @@ autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=585826072]
 z_index = 2
-position = Vector2(116, 164)
+position = Vector2(116, 176)
 script = ExtResource("3_hjr6m")
 speed = 320
 metadata/_edit_group_ = true
@@ -290,6 +290,12 @@ sprite_frames = SubResource("SpriteFrames_wm35n")
 animation = &"idle_down"
 autoplay = "idle_down"
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1528515616]
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 768
+
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("9_met58")]
 
 [node name="Collision" type="Node" parent="." unique_id=552488099]
@@ -297,12 +303,12 @@ autoplay = "idle_down"
 [node name="Counters" type="StaticBody2D" parent="Collision" unique_id=1881663893]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision/Counters" unique_id=1889691488]
-position = Vector2(537.5, 53.5)
+position = Vector2(774.5, 87.5)
 shape = SubResource("RectangleShape2D_8sbsv")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision/Counters" unique_id=1020527438]
-position = Vector2(897.5, 164.25)
+position = Vector2(1003.5, 307.625)
 shape = SubResource("RectangleShape2D_hjr6m")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
@@ -316,29 +322,29 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 [node name="Walls" type="StaticBody2D" parent="Collision" unique_id=520233423]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision/Walls" unique_id=396347679]
-position = Vector2(1168.75, 374)
+position = Vector2(1312, 379)
 shape = SubResource("RectangleShape2D_nj3nl")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision/Walls" unique_id=1518173379]
-position = Vector2(562.75, 649)
+position = Vector2(632.125, 762)
 shape = SubResource("RectangleShape2D_h5vr8")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Collision/Walls" unique_id=533892800]
-position = Vector2(-25.5, 318)
+position = Vector2(-25.5, 355)
 shape = SubResource("RectangleShape2D_1wrbj")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Collision/Walls" unique_id=1163213011]
-position = Vector2(87, -15.5)
+position = Vector2(87, 14.25)
 shape = SubResource("RectangleShape2D_15j66")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="TrashCan" type="StaticBody2D" parent="Collision" unique_id=853124934]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision/TrashCan" unique_id=1506972995]
-position = Vector2(64.5, 565)
+position = Vector2(195.5, 676.5)
 shape = SubResource("RectangleShape2D_wm35n")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
@@ -346,16 +352,17 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 script = ExtResource("10_hjr6m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BedroomTransition" unique_id=749936752]
-position = Vector2(109, 32)
+position = Vector2(109, 37.5)
 shape = SubResource("RectangleShape2D_met58")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 
 [node name="ChipsTask" type="Area2D" parent="." unique_id=1680379520]
+position = Vector2(101, 41)
 script = ExtResource("12_h5vr8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ChipsTask" unique_id=433985781]
 position = Vector2(895, 375)
-scale = Vector2(6, 6)
+scale = Vector2(8, 8)
 texture = ExtResource("11_lwwot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChipsTask" unique_id=1836540843]
