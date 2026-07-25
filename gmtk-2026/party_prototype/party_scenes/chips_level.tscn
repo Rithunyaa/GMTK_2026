@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxky786ob8rn0" path="res://party_prototype/party_assets/chip_level/spotted_line.png" id="5_wjwi8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uceqd"]
-size = Vector2(29.9375, 1.3125)
+size = Vector2(60, 1.313)
 
 [node name="FillChipsBowl" type="Node2D" unique_id=1823313422]
 script = ExtResource("1_661nn")
@@ -17,18 +17,18 @@ chip_scene = ExtResource("2_wjwi8")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=118717536]
 position = Vector2(576.5, 325.99997)
-scale = Vector2(8.034722, 8.074074)
+scale = Vector2(8, 8)
 texture = ExtResource("1_4vwy7")
 
 [node name="Bowl" type="Sprite2D" parent="." unique_id=431347520]
-position = Vector2(523, 497)
-scale = Vector2(16, 16)
+position = Vector2(523, 498)
+scale = Vector2(8, 8)
 texture = ExtResource("2_0ovbp")
 
 [node name="BowlArea" type="Area2D" parent="Bowl" unique_id=1605113220]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bowl/BowlArea" unique_id=369680185]
-position = Vector2(0.03125, -5.78125)
+position = Vector2(0.031, -13)
 shape = SubResource("RectangleShape2D_uceqd")
 debug_color = Color(0.93127424, 2.8300881e-05, 0.6554483, 0.41960785)
 
