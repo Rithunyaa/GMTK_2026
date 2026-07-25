@@ -237,12 +237,15 @@ size = Vector2(135, 103)
 size = Vector2(33, 118)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="CircleShape2D" id="CircleShape2D_wxv7u"]
 radius = 69.92139
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u2te"]
 size = Vector2(54, 195)
 
+=======
+>>>>>>> parent of 1eadab5 (living room transition & balloon taskpoint)
 =======
 >>>>>>> parent of 1eadab5 (living room transition & balloon taskpoint)
 [node name="LivingRoom" type="Node2D" unique_id=1359939338]
@@ -272,7 +275,11 @@ vertical_alignment = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1931515992]
 <<<<<<< HEAD
+<<<<<<< HEAD
 position = Vector2(455, 1083)
+=======
+position = Vector2(761, 156)
+>>>>>>> parent of 1eadab5 (living room transition & balloon taskpoint)
 =======
 position = Vector2(761, 156)
 >>>>>>> parent of 1eadab5 (living room transition & balloon taskpoint)
@@ -393,6 +400,7 @@ position = Vector2(1484, 46)
 shape = SubResource("RectangleShape2D_iuls3")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 [node name="BalloonTask" type="Area2D" parent="." unique_id=211737761]
 position = Vector2(1484, 46)
@@ -419,5 +427,7 @@ script = ExtResource("12_034er")
 position = Vector2(610, 1223.5)
 shape = SubResource("RectangleShape2D_8u2te")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
+=======
+>>>>>>> parent of 1eadab5 (living room transition & balloon taskpoint)
 =======
 >>>>>>> parent of 1eadab5 (living room transition & balloon taskpoint)
