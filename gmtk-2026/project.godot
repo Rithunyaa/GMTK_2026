@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*uid://34nd6n44v1mk"
+GameManager="uid://34nd6n44v1mk"
 GameTimer="*uid://dyf76inijwokv"
 
 [display]
@@ -32,10 +32,6 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 folder_colors={
 "res://addons/": "green",
-"res://battle_prototype/": "red",
-"res://battle_prototype/battle_assets/": "red",
-"res://battle_prototype/battle_scenes/": "red",
-"res://battle_prototype/battle_scripts/": "red",
 "res://party_prototype/": "pink"
 }
 
