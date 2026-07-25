@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxky786ob8rn0"
-path="res://.godot/imported/spotted_line.png-5db66287390369cac369561400cd9378.ctex"
+uid="uid://ctl27aac3xwgi"
+path="res://.godot/imported/laundry_basket.png-490dcd52391ca7b54fc7ed81d390401e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/spotted_line.png"
-dest_files=["res://.godot/imported/spotted_line.png-5db66287390369cac369561400cd9378.ctex"]
+source_file="res://party_prototype/party_assets/laundry_level/laundry_basket.png"
+dest_files=["res://.godot/imported/laundry_basket.png-490dcd52391ca7b54fc7ed81d390401e.ctex"]
 
 [params]
 

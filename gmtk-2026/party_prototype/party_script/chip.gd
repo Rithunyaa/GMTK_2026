@@ -8,9 +8,9 @@ var chip_gravity = 500
 
 
 var chip_variations = [
-	preload("res://party_prototype/party_assets/chip_1.png"),
-	preload("res://party_prototype/party_assets/chip_2.png"),
-	preload("res://party_prototype/party_assets/chip_3.png")
+	preload("res://party_prototype/party_assets/chip_level/chip_1.png"),
+	preload("res://party_prototype/party_assets/chip_level/chip_2.png"),
+	preload("res://party_prototype/party_assets/chip_level/chip_3.png")
 ]
 
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfefsflfn6eac"]
 
-[ext_resource type="Texture2D" uid="uid://cyeqyy0i3ldgu" path="res://party_prototype/party_assets/kitchen.png" id="1_dxbdb"]
+[ext_resource type="Texture2D" uid="uid://cyeqyy0i3ldgu" path="res://party_prototype/party_assets/chip_level/kitchen.png" id="1_dxbdb"]
 [ext_resource type="Script" uid="uid://cony8u2ynhpf0" path="res://party_prototype/party_script/kitchen.gd" id="1_nj3nl"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_8sbsv"]
 [ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_hjr6m"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="8_15j66"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="9_met58"]
 [ext_resource type="Script" uid="uid://ciawo4cul50pw" path="res://party_prototype/party_script/bedroom_transition.gd" id="10_hjr6m"]
-[ext_resource type="Texture2D" uid="uid://ej0sflwjj7wr" path="res://party_prototype/party_assets/chips_preparing_taskpoint.png" id="11_lwwot"]
+[ext_resource type="Texture2D" uid="uid://ej0sflwjj7wr" path="res://party_prototype/party_assets/chip_level/chips_preparing_taskpoint.png" id="11_lwwot"]
 [ext_resource type="Script" uid="uid://7hdov5mqmqn8" path="res://party_prototype/party_script/chips_task.gd" id="12_h5vr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7pri"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv4ybx0ion1xq"
-path="res://.godot/imported/laundry_taskpoint.png-14690452d105035eede24c9125348a63.ctex"
+path="res://.godot/imported/laundry_taskpoint.png-9a0451c0bf2d519f9ef8123e508da9cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/laundry_taskpoint.png"
-dest_files=["res://.godot/imported/laundry_taskpoint.png-14690452d105035eede24c9125348a63.ctex"]
+source_file="res://party_prototype/party_assets/laundry_level/laundry_taskpoint.png"
+dest_files=["res://.godot/imported/laundry_taskpoint.png-9a0451c0bf2d519f9ef8123e508da9cd.ctex"]
 
 [params]
 

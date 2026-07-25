@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ej0sflwjj7wr"
-path="res://.godot/imported/chips_preparing_taskpoint.png-02ab3e6ec4d3403a4bb67330588da694.ctex"
+uid="uid://cql552l06xgtl"
+path="res://.godot/imported/chip_3.png-cc5e4e510b14fccfdce902b1633ed16a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/chips_preparing_taskpoint.png"
-dest_files=["res://.godot/imported/chips_preparing_taskpoint.png-02ab3e6ec4d3403a4bb67330588da694.ctex"]
+source_file="res://party_prototype/party_assets/chip_level/chip_3.png"
+dest_files=["res://.godot/imported/chip_3.png-cc5e4e510b14fccfdce902b1633ed16a.ctex"]
 
 [params]
 

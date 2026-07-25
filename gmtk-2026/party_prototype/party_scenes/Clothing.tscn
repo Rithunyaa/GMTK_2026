@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diwura135uvtc"]
 
 [ext_resource type="Script" uid="uid://dl1ygyobedop4" path="res://party_prototype/party_script/clothing.gd" id="1_i7ogi"]
-[ext_resource type="Texture2D" uid="uid://bw5g602dv8u4a" path="res://party_prototype/party_assets/clothingpile_1.png" id="2_hc6r4"]
+[ext_resource type="Texture2D" uid="uid://bw5g602dv8u4a" path="res://party_prototype/party_assets/laundry_level/clothingpile_1.png" id="2_hc6r4"]
 [ext_resource type="AudioStream" uid="uid://dnyxx2rc1aeb" path="res://party_prototype/party_assets/audio/drag_clothes.mp3" id="3_nbygy"]
 
 [node name="Clothing1" type="Area2D" unique_id=2034316761]

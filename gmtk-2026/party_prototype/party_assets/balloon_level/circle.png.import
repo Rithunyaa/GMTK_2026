@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyeqyy0i3ldgu"
-path="res://.godot/imported/kitchen.png-b41c8c09fdf426c79bd46113e974d763.ctex"
+uid="uid://cctpt7sdw7ckr"
+path="res://.godot/imported/circle.png-cfce04d76a57953823598fbcdc217833.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/kitchen.png"
-dest_files=["res://.godot/imported/kitchen.png-b41c8c09fdf426c79bd46113e974d763.ctex"]
+source_file="res://party_prototype/party_assets/balloon_level/circle.png"
+dest_files=["res://.godot/imported/circle.png-cfce04d76a57953823598fbcdc217833.ctex"]
 
 [params]
 

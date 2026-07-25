@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm6gtk1frejrt"
-path="res://.godot/imported/chip_2.png-b326a20437acf37a612aaeccc85c1ffb.ctex"
+uid="uid://bw5g602dv8u4a"
+path="res://.godot/imported/clothingpile_1.png-36e6b677f326c79b28e0f8372b8a6565.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/chip_2.png"
-dest_files=["res://.godot/imported/chip_2.png-b326a20437acf37a612aaeccc85c1ffb.ctex"]
+source_file="res://party_prototype/party_assets/laundry_level/clothingpile_1.png"
+dest_files=["res://.godot/imported/clothingpile_1.png-36e6b677f326c79b28e0f8372b8a6565.ctex"]
 
 [params]
 

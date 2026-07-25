@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://npsekyioda25"]
 
-[ext_resource type="Texture2D" uid="uid://dyjuuudiwjmve" path="res://party_prototype/party_assets/kitchen_background.png" id="1_4vwy7"]
+[ext_resource type="Texture2D" uid="uid://dyjuuudiwjmve" path="res://party_prototype/party_assets/chip_level/kitchen_background.png" id="1_4vwy7"]
 [ext_resource type="Script" uid="uid://cx7wt82oylnpj" path="res://party_prototype/party_script/chips_level.gd" id="1_661nn"]
-[ext_resource type="Texture2D" uid="uid://cd5tocemdk0lb" path="res://party_prototype/party_assets/bowl.png" id="2_0ovbp"]
+[ext_resource type="Texture2D" uid="uid://cd5tocemdk0lb" path="res://party_prototype/party_assets/chip_level/bowl.png" id="2_0ovbp"]
 [ext_resource type="PackedScene" uid="uid://c0gyg6lq6h6xn" path="res://party_prototype/party_scenes/Chip.tscn" id="2_wjwi8"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="3_uceqd"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="4_661nn"]
-[ext_resource type="Texture2D" uid="uid://bxky786ob8rn0" path="res://party_prototype/party_assets/spotted_line.png" id="5_wjwi8"]
+[ext_resource type="Texture2D" uid="uid://bxky786ob8rn0" path="res://party_prototype/party_assets/chip_level/spotted_line.png" id="5_wjwi8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uceqd"]
 size = Vector2(29.9375, 1.3125)

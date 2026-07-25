@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyjuuudiwjmve"
-path="res://.godot/imported/kitchen_background.png-4fe5ec5a80eea16cf5923aa236cd810d.ctex"
+uid="uid://bxky786ob8rn0"
+path="res://.godot/imported/spotted_line.png-76c9a401b0803f224243284704ff3079.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/kitchen_background.png"
-dest_files=["res://.godot/imported/kitchen_background.png-4fe5ec5a80eea16cf5923aa236cd810d.ctex"]
+source_file="res://party_prototype/party_assets/chip_level/spotted_line.png"
+dest_files=["res://.godot/imported/spotted_line.png-76c9a401b0803f224243284704ff3079.ctex"]
 
 [params]
 

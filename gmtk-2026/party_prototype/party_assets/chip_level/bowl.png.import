@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0chpb44h1d77"
-path="res://.godot/imported/chip_4.png-0566935e7d81833ffa8f8056b8884206.ctex"
+uid="uid://cd5tocemdk0lb"
+path="res://.godot/imported/bowl.png-2d33fe9d0fd09590b4c1752475ae76a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/chip_4.png"
-dest_files=["res://.godot/imported/chip_4.png-0566935e7d81833ffa8f8056b8884206.ctex"]
+source_file="res://party_prototype/party_assets/chip_level/bowl.png"
+dest_files=["res://.godot/imported/bowl.png-2d33fe9d0fd09590b4c1752475ae76a0.ctex"]
 
 [params]
 

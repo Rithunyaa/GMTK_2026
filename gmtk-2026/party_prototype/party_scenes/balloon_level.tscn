@@ -1,10 +1,61 @@
 [gd_scene format=3 uid="uid://cem5yafscs5qs"]
 
-[ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="1_a13e7"]
+[ext_resource type="Script" uid="uid://dgw0f3kqv2q3l" path="res://party_prototype/party_script/balloon_level.gd" id="1_7vjgf"]
+[ext_resource type="Texture2D" uid="uid://cctpt7sdw7ckr" path="res://party_prototype/party_assets/balloon_level/circle.png" id="1_a13e7"]
+[ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="3_lpwqg"]
+[ext_resource type="Texture2D" uid="uid://cluuq2bl1ebnu" path="res://party_prototype/party_assets/balloon_level/balloon.png" id="4_yht83"]
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="5_iuobi"]
+[ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="6_nbtqd"]
+[ext_resource type="Texture2D" uid="uid://cymb2yp4au1ow" path="res://party_prototype/party_assets/balloon_level/green_zone.png" id="7_qx4yo"]
 
 [node name="InflateBalloons" type="Node2D" unique_id=1023644162]
+script = ExtResource("1_7vjgf")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=480760523]
-position = Vector2(576.5, 319.75)
-scale = Vector2(8.104167, 8.179012)
+[node name="InnerCircle" type="Sprite2D" parent="." unique_id=2068144766]
+z_index = 10
+position = Vector2(250, 250)
+scale = Vector2(1.5, 1.401)
 texture = ExtResource("1_a13e7")
+
+[node name="OuterCircle" type="Sprite2D" parent="." unique_id=1884608525]
+z_index = 10
+position = Vector2(250, 250)
+scale = Vector2(2, 1.872)
+texture = ExtResource("1_a13e7")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2134861155]
+position = Vector2(566, 334)
+scale = Vector2(8.180556, 8.333334)
+texture = ExtResource("3_lpwqg")
+
+[node name="Balloon" type="Sprite2D" parent="." unique_id=893512970]
+position = Vector2(252, 261)
+texture = ExtResource("4_yht83")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1735081987]
+
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=409807482]
+offset_left = 10.0
+offset_top = 580.0
+offset_right = 1148.0
+offset_bottom = 644.0
+theme_override_colors/font_outline_color = Color(0.2200064, 2.481742e-07, 6.016344e-08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("5_iuobi")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[shake level=6]Party starts in: 30 secs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyTimer" type="Timer" parent="." unique_id=471385039]
+wait_time = 0.1
+autostart = true
+
+[node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("6_nbtqd")]
+
+[node name="GreenZone" type="Sprite2D" parent="." unique_id=1909879713]
+position = Vector2(245.50002, 247.50002)
+scale = Vector2(1.9938272, 1.8402065)
+texture = ExtResource("7_qx4yo")

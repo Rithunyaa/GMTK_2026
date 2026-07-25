@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cr0rwtf6ytq4d"]
 
 [ext_resource type="Script" uid="uid://cesygov5hf08s" path="res://party_prototype/party_script/clean_room_level.gd" id="1_hmsfl"]
-[ext_resource type="Texture2D" uid="uid://ctl27aac3xwgi" path="res://party_prototype/party_assets/laundry_basket.png" id="1_lspg1"]
+[ext_resource type="Texture2D" uid="uid://ctl27aac3xwgi" path="res://party_prototype/party_assets/laundry_level/laundry_basket.png" id="1_lspg1"]
 [ext_resource type="PackedScene" uid="uid://diwura135uvtc" path="res://party_prototype/party_scenes/Clothing.tscn" id="2_pbk0y"]
 [ext_resource type="PackedScene" uid="uid://ba2d3e84po70l" path="res://party_prototype/party_scenes/Clothing2.tscn" id="3_701n2"]
 [ext_resource type="Texture2D" uid="uid://bew2lvkvcjas0" path="res://party_prototype/party_assets/bedroom_background.png" id="3_pbk0y"]

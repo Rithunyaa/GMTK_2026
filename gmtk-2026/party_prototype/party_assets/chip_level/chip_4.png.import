@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctl27aac3xwgi"
-path="res://.godot/imported/laundry_basket.png-03d91b440de569a14f094334a81941b3.ctex"
+uid="uid://c0chpb44h1d77"
+path="res://.godot/imported/chip_4.png-94a4bf64a0f41ba74775a002027d26ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/laundry_basket.png"
-dest_files=["res://.godot/imported/laundry_basket.png-03d91b440de569a14f094334a81941b3.ctex"]
+source_file="res://party_prototype/party_assets/chip_level/chip_4.png"
+dest_files=["res://.godot/imported/chip_4.png-94a4bf64a0f41ba74775a002027d26ca.ctex"]
 
 [params]
 

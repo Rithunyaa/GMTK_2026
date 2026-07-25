@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw1neoyo6venr"
-path="res://.godot/imported/chip_1.png-7e08fed45c5dd9faa4d4473bcac95495.ctex"
+uid="uid://cyeqyy0i3ldgu"
+path="res://.godot/imported/kitchen.png-1b1df5e150549f349e03b0c6d6531720.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/chip_1.png"
-dest_files=["res://.godot/imported/chip_1.png-7e08fed45c5dd9faa4d4473bcac95495.ctex"]
+source_file="res://party_prototype/party_assets/chip_level/kitchen.png"
+dest_files=["res://.godot/imported/kitchen.png-1b1df5e150549f349e03b0c6d6531720.ctex"]
 
 [params]
 
