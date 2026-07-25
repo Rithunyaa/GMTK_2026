@@ -7,6 +7,10 @@ func _ready():
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
 	
+	var player := $Player
+	match GameManager.previous_scene:
+		"kitchen":  player.position = Vector2(1100,523)
+	
 	GameManager.previous_scene = "hallway"
 
 func update_timer():
