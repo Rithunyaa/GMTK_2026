@@ -6,6 +6,15 @@ extends Node2D
 func _ready():
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
+	
+	var player := $Player
+	match GameManager.previous_scene:
+		"hallway": player.position = Vector2(987, 577)
+		"laundry_task": player.position = Vector2(329,425)
+		
+		"kitchen": player.position = Vector2(987, 577)
+	
+	GameManager.previous_scene = 'bedroom'
 
 
 func update_timer():

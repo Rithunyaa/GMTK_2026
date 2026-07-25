@@ -226,7 +226,7 @@ size = Vector2(256, 51)
 size = Vector2(149, 110)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_met58"]
-size = Vector2(208, 217)
+size = Vector2(208, 64)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wrbj"]
 radius = 57.48913
@@ -268,7 +268,7 @@ autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=585826072]
 z_index = 2
-position = Vector2(75, 409)
+position = Vector2(116, 164)
 script = ExtResource("3_hjr6m")
 speed = 320
 metadata/_edit_group_ = true
@@ -339,7 +339,7 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 script = ExtResource("10_hjr6m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BedroomTransition" unique_id=749936752]
-position = Vector2(109, 108.5)
+position = Vector2(109, 32)
 shape = SubResource("RectangleShape2D_met58")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 

@@ -18,6 +18,8 @@ func _ready():
 	bowl_area.area_entered.connect(_on_chip_entered)
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
+	
+	GameManager.previous_scene = "chips_task"
 
 
 func update_timer():
