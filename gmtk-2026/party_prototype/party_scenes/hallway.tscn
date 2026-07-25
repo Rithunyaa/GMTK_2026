@@ -203,7 +203,7 @@ animations = [{
 size = Vector2(1695, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t4nt"]
-size = Vector2(131.5, 216)
+size = Vector2(131.5, 179)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cbao"]
 size = Vector2(253, 483.5)
@@ -216,6 +216,9 @@ size = Vector2(224.5, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qflsh"]
 size = Vector2(208, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bgy4"]
+size = Vector2(88, 202)
 
 [node name="Hallway" type="Node2D" unique_id=1107556205]
 script = ExtResource("1_6t4nt")
@@ -243,7 +246,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1198076294]
-position = Vector2(1762, 239)
+position = Vector2(1758, 265)
 script = ExtResource("2_jj1ib")
 speed = 320
 metadata/_edit_group_ = true
@@ -280,7 +283,7 @@ shape = SubResource("RectangleShape2D_6t4nt")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Collsion/Walls" unique_id=111674490]
-position = Vector2(-55, 594)
+position = Vector2(-55, 612.5)
 shape = SubResource("RectangleShape2D_6t4nt")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
@@ -321,4 +324,11 @@ script = ExtResource("8_2cbao")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BedroomTransition" unique_id=1661705425]
 position = Vector2(1771, 94)
 shape = SubResource("RectangleShape2D_qflsh")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
+
+[node name="LivingRoomTransition" type="Area2D" parent="." unique_id=1980220709]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingRoomTransition" unique_id=1708467146]
+position = Vector2(-20, 418)
+shape = SubResource("RectangleShape2D_4bgy4")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)

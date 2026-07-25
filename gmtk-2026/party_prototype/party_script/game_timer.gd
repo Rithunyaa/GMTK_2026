@@ -3,7 +3,7 @@ extends Node
 signal time_updated
 signal time_finished
 
-var time_left = 30.0
+var time_left = 60.0
 var running = true
 
 
