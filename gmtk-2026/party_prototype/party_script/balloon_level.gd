@@ -1,147 +1,49 @@
 extends Node2D
 
 
-@onready var balloon = $Balloon
-@onready var green_zone = $GreenZone
-
-
-var balloon_size = 0.5
-var growth_speed = 1
-var growing = true
+var completed_balloons = 0
+var current_balloon = 0
 @onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
 
 
-
-
-
-
-var good_min_size = 1.5
-var good_max_size = 2.0
-
-var max_size = 2.5
-var min_size = 0.5
-
-var can_click = false
-
-
-var balloons_completed = 0
-var balloons_needed = 3
-
-
-
 func _ready():
-	green_zone.visible = false
+
+	$Balloon1.balloon_completed.connect(balloon_done)
+	$Balloon2.balloon_completed.connect(balloon_done)
+	$Balloon3.balloon_completed.connect(balloon_done)
+	$Balloon1.set_process(true)
+	$Balloon2.set_process(false)
+	$Balloon3.set_process(false)
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
 
 
 
+func balloon_done():
 
-func _process(delta):
+	if current_balloon == 0:
+		$Balloon1.set_process(false)
+		current_balloon = 1
+		$Balloon2.set_process(true)
 
-	if growing:
-		balloon_size += growth_speed * delta
-
-		if balloon_size >= max_size:
-			growing = false
-
-	else:
-		balloon_size -= growth_speed * delta
-
-		if balloon_size <= min_size:
-			growing = true
-
-
-	balloon.scale = Vector2(
-		balloon_size,
-		balloon_size
-	)
-
-
-	# Check green zone
-	if balloon_size >= good_min_size and balloon_size <= good_max_size:
-		can_click = true
-		green_zone.visible = true
+	elif current_balloon == 1:
+		$Balloon2.set_process(false)
+		current_balloon = 2
+		$Balloon3.set_process(true)
 
 	else:
-		can_click = false
-		green_zone.visible = false
-
-
-	if balloon_size >= good_min_size and balloon_size <= good_max_size:
-	
-		can_click = true
-		green_zone.visible = true
-
-	else:
-	
-		can_click = false
-		green_zone.visible = false
-
-
-
-func _input(event):
-
-	if event is InputEventMouseButton:
-		
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-
-			if can_click:
-				success()
-
-			else:
-				fail()
-
-
-
-func success():
-
-	print("Good!")
-
-	balloons_completed += 1
-
-
-	if balloons_completed >= balloons_needed:
+		$Balloon3.set_process(false)
 		finish_task()
-
-	else:
-		reset_balloon()
-
-
-
-func fail():
-
-	print("Missed!")
-
-	reset_balloon()
-
-
-
-func reset_balloon():
-
-	balloon_size = 0.2
-
-	balloon.scale = Vector2(
-		balloon_size,
-		balloon_size
-	)
-
-	green_zone.visible = false
-
-
 
 
 
 func finish_task():
 
-	print("Balloons finished!")
+	print("All balloons finished!")
 
 	get_tree().change_scene_to_file(
 		"res://party_prototype/party_scenes/Bedroom.tscn"
 	)
 	
-	
-
-
 func update_timer():
 	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()
