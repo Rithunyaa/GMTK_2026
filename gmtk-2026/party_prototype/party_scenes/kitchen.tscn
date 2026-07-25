@@ -234,15 +234,22 @@ radius = 57.48913
 [node name="Kitchen" type="Node2D" unique_id=2098177614]
 script = ExtResource("1_nj3nl")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=387140127]
+offset_left = -55.0
+offset_top = -32.0
+offset_right = 1204.0
+offset_bottom = 685.0
+color = Color(0, 0, 0, 1)
+
 [node name="KitchenFrontScene" type="Sprite2D" parent="." unique_id=1457916040]
 z_index = 10
 position = Vector2(513, 306.99997)
-scale = Vector2(7.7749996, 6.6249995)
+scale = Vector2(8, 8)
 texture = ExtResource("2_1wrbj")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1477879727]
 position = Vector2(575.5, 325)
-scale = Vector2(7.0937495, 6.6041665)
+scale = Vector2(8, 8)
 texture = ExtResource("1_dxbdb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=957145815]
