@@ -2,30 +2,60 @@
 
 [ext_resource type="Texture2D" uid="uid://bmoqdtx67jkv3" path="res://party_prototype/party_assets/mainmenu_background.png" id="1_fihne"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_j8xxr"]
+[ext_resource type="Texture2D" uid="uid://dncoibvcfqx6x" path="res://party_prototype/party_assets/mainmenu_middleground.png" id="2_ohmug"]
+[ext_resource type="Texture2D" uid="uid://cyi2wg2g88reo" path="res://party_prototype/party_assets/mainmenu_frontground.png" id="3_ohmug"]
 
 [node name="Node2D" type="Node2D" unique_id=2131442120]
 
-[node name="Background" type="ColorRect" parent="." unique_id=1831300659]
-offset_left = -5.0
-offset_top = 1.0
-offset_right = 1155.0
-offset_bottom = 651.0
-color = Color(0.9882353, 1, 1, 1)
-
-[node name="Balloons" type="Sprite2D" parent="." unique_id=870543132]
-position = Vector2(573, 329)
+[node name="Background" type="Sprite2D" parent="." unique_id=870543132]
 texture = ExtResource("1_fihne")
+centered = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=453242578]
-offset_left = 298.0
-offset_top = 79.0
-offset_right = 817.0
-offset_bottom = 331.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+[node name="Balloons" type="Sprite2D" parent="." unique_id=1851708678]
+texture = ExtResource("2_ohmug")
+centered = false
+
+[node name="Text" type="Sprite2D" parent="." unique_id=1459886329]
+texture = ExtResource("3_ohmug")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Text" unique_id=453242578]
+offset_left = 143.0
+offset_top = -33.0
+offset_right = 662.0
+offset_bottom = 219.0
+theme_override_colors/default_color = Color(0.93333334, 0.70980394, 0.6117647, 1)
+theme_override_constants/outline_size = 30
 theme_override_fonts/normal_font = ExtResource("2_j8xxr")
-theme_override_font_sizes/normal_font_size = 120
-text = "Party
-   Time"
+theme_override_font_sizes/normal_font_size = 40
+text = "It's"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Text" unique_id=1035124551]
+offset_left = 275.0
+offset_top = 401.0
+offset_right = 1216.0
+offset_bottom = 653.0
+theme_override_colors/default_color = Color(0.93333334, 0.70980394, 0.6117647, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("2_j8xxr")
+theme_override_font_sizes/normal_font_size = 20
+text = "but still you haven't fully prepared for it"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Text" unique_id=1967360917]
+offset_left = 98.0
+offset_top = 458.0
+offset_right = 1039.0
+offset_bottom = 710.0
+theme_override_colors/default_color = Color(0.93333334, 0.70980394, 0.6117647, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("2_j8xxr")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave]Press any key"
 horizontal_alignment = 1
 vertical_alignment = 1
 
