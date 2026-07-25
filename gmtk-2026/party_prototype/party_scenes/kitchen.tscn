@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cyeqyy0i3ldgu" path="res://party_prototype/party_assets/chip_level/kitchen.png" id="1_dxbdb"]
 [ext_resource type="Script" uid="uid://cony8u2ynhpf0" path="res://party_prototype/party_script/kitchen.gd" id="1_nj3nl"]
+[ext_resource type="Texture2D" uid="uid://xwl0sft6iqho" path="res://party_prototype/party_assets/kitchen_front_scene.png" id="2_1wrbj"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_8sbsv"]
 [ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_hjr6m"]
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="4_lwwot"]
@@ -221,6 +222,9 @@ size = Vector2(37, 714)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15j66"]
 size = Vector2(256, 51)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wm35n"]
+size = Vector2(149, 110)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_met58"]
 size = Vector2(208, 217)
 
@@ -229,6 +233,12 @@ radius = 57.48913
 
 [node name="Kitchen" type="Node2D" unique_id=2098177614]
 script = ExtResource("1_nj3nl")
+
+[node name="KitchenFrontScene" type="Sprite2D" parent="." unique_id=1457916040]
+z_index = 10
+position = Vector2(513, 306.99997)
+scale = Vector2(7.7749996, 6.6249995)
+texture = ExtResource("2_1wrbj")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1477879727]
 position = Vector2(575.5, 325)
@@ -257,7 +267,8 @@ wait_time = 0.1
 autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=585826072]
-position = Vector2(111, 319)
+z_index = 2
+position = Vector2(75, 409)
 script = ExtResource("3_hjr6m")
 speed = 320
 metadata/_edit_group_ = true
@@ -315,6 +326,13 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Collision/Walls" unique_id=1163213011]
 position = Vector2(87, -15.5)
 shape = SubResource("RectangleShape2D_15j66")
+debug_color = Color(1, 0, 0.11764706, 0.41960785)
+
+[node name="TrashCan" type="StaticBody2D" parent="Collision" unique_id=853124934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision/TrashCan" unique_id=1506972995]
+position = Vector2(64.5, 565)
+shape = SubResource("RectangleShape2D_wm35n")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="BedroomTransition" type="Area2D" parent="." unique_id=983269887]

@@ -8,6 +8,10 @@ extends Node2D
 var balloon_size = 0.5
 var growth_speed = 1
 var growing = true
+@onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
+
+
+
 
 
 
@@ -27,6 +31,8 @@ var balloons_needed = 3
 
 func _ready():
 	green_zone.visible = false
+	update_timer()
+	GameTimer.time_updated.connect(update_timer)
 
 
 
@@ -133,3 +139,9 @@ func finish_task():
 	get_tree().change_scene_to_file(
 		"res://party_prototype/party_scenes/Bedroom.tscn"
 	)
+	
+	
+
+
+func update_timer():
+	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()
