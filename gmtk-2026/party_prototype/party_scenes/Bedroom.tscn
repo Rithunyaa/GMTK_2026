@@ -235,6 +235,7 @@ offset_left = -43.0
 offset_top = -130.0
 offset_right = 1175.0
 offset_bottom = 827.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1465262522]

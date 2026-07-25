@@ -235,6 +235,7 @@ radius = 57.48913
 script = ExtResource("1_nj3nl")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=387140127]
+visible = false
 offset_left = -55.0
 offset_top = -32.0
 offset_right = 1204.0
