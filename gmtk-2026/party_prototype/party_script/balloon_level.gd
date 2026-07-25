@@ -42,7 +42,7 @@ func finish_task():
 	print("All balloons finished!")
 
 	get_tree().change_scene_to_file(
-		"res://party_prototype/party_scenes/Bedroom.tscn"
+		"res://party_prototype/party_scenes/living_room.tscn"
 	)
 	
 func update_timer():

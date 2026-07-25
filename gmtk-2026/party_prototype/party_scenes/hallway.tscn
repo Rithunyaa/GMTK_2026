@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://ciawo4cul50pw" path="res://party_prototype/party_script/bedroom_transition.gd" id="8_2cbao"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="9_attww"]
 [ext_resource type="Script" uid="uid://c0vi7tkuffin3" path="res://party_prototype/party_script/kitchen_transition.gd" id="11_1aij1"]
+[ext_resource type="Script" uid="uid://ckbd3menh2r3q" path="res://party_prototype/party_script/living_room_transition.gd" id="13_6r7v0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6r7v0"]
 size = Vector2(125, 193)
@@ -203,7 +204,7 @@ animations = [{
 size = Vector2(1695, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t4nt"]
-size = Vector2(131.5, 179)
+size = Vector2(131.5, 219.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cbao"]
 size = Vector2(253, 483.5)
@@ -278,7 +279,7 @@ shape = SubResource("RectangleShape2D_jj1ib")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Collsion/Walls" unique_id=1966130716]
-position = Vector2(-60, 103)
+position = Vector2(-60, 123.25)
 shape = SubResource("RectangleShape2D_6t4nt")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
@@ -327,8 +328,9 @@ shape = SubResource("RectangleShape2D_qflsh")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 
 [node name="LivingRoomTransition" type="Area2D" parent="." unique_id=1980220709]
+script = ExtResource("13_6r7v0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LivingRoomTransition" unique_id=1708467146]
-position = Vector2(-20, 418)
+position = Vector2(-20, 379)
 shape = SubResource("RectangleShape2D_4bgy4")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
