@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbbnje36cw214"]
 
 [ext_resource type="Texture2D" uid="uid://bhs2jhms4cuj3" path="res://party_prototype/party_assets/balloon_level/living_room.png" id="1_f51lu"]
+[ext_resource type="Script" uid="uid://dp3clf2dovb7j" path="res://party_prototype/party_script/living_room.gd" id="1_wxv7u"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_ix5o2"]
 [ext_resource type="Script" uid="uid://d23gnjhbmpm6u" path="res://battle_prototype/battle_scripts/player.gd" id="3_mh50a"]
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="4_0bukb"]
@@ -242,9 +243,10 @@ size = Vector2(33, 118)
 radius = 69.92139
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u2te"]
-size = Vector2(55, 235)
+size = Vector2(54, 195)
 
 [node name="LivingRoom" type="Node2D" unique_id=1359939338]
+script = ExtResource("1_wxv7u")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=244107022]
 position = Vector2(800, 772)
@@ -269,7 +271,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1931515992]
-position = Vector2(308, 1205)
+position = Vector2(455, 1083)
 script = ExtResource("3_mh50a")
 speed = 320
 metadata/_edit_group_ = true
@@ -409,6 +411,6 @@ autostart = true
 script = ExtResource("12_034er")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hallway_Transition" unique_id=1675065449]
-position = Vector2(609.5, 1231.5)
+position = Vector2(610, 1223.5)
 shape = SubResource("RectangleShape2D_8u2te")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)

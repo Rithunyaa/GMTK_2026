@@ -1,19 +1,18 @@
 extends Node2D
 
-@onready var timer_label: RichTextLabel = $"../CanvasLayer/TimerLabel"
+@onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
 
 
 func _ready():
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
 	
-
-	var player: CharacterBody2D = $"../Player"
-
+	var player := $Player
+	
 	match GameManager.previous_scene:
 		"chips_task": player.position = Vector2(805,392)
 	
-	GameManager.previous_scene = "kitchen"
+	GameManager.previous_scene = "living_room"
 
 
 func update_timer():
