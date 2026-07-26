@@ -11,6 +11,7 @@ enum DIRECTIONS{
 	RIGHT
 }
 var facing_direction = DIRECTIONS.DOWN
+var can_move = true
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
@@ -29,9 +30,10 @@ func _physics_process(delta):
 		direction.y -= 1
 
 	velocity = direction.normalized() * speed
-	move_and_slide()
+	if can_move:
+		move_and_slide()
 
-	update_animation(direction)
+		update_animation(direction)
 
 
 

@@ -57,7 +57,8 @@ func _ready():
 
 
 func start_intro():
-
+	$Player.can_move = false
+	
 	GameTimer.game_active = false
 
 	dialogue_box.visible = true
@@ -137,6 +138,7 @@ func finish_text():
 
 
 func close_intro():
+	$Player.can_move = true
 
 	dialogue_box.visible = false
 	dialogue_text.visible = false
@@ -155,6 +157,7 @@ func start_game():
 	
 	dialogue_text.text = "Click the laundry basket (highlighted white)"
 
+	#TODO: it is a bug,timer shouldnt be reset everytime when player enter
 	GameTimer.reset_timer()
 
 
