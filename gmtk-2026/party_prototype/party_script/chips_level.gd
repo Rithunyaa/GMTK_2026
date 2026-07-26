@@ -68,4 +68,5 @@ func _on_chip_entered(area):
 		check_finished()
 
 func _change_scene():
+	GameTimer.chips_done = true
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/kitchen.tscn")

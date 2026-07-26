@@ -111,4 +111,5 @@ func go_to_bedroom():
 
 func _change_to_bedroom():
 	await $DarkScreen.darker()
+	GameTimer.laundry_done = true
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/Bedroom.tscn")

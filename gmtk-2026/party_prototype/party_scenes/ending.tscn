@@ -1,7 +1,38 @@
 [gd_scene format=3 uid="uid://baw20qg51mx3l"]
 
+[ext_resource type="Script" uid="uid://dq4a654mbn7fr" path="res://party_prototype/party_script/ending.gd" id="1_6cbrh"]
 [ext_resource type="Texture2D" uid="uid://bmoqdtx67jkv3" path="res://party_prototype/party_assets/mainmenu_background.png" id="1_22m7w"]
 [ext_resource type="Texture2D" uid="uid://dncoibvcfqx6x" path="res://party_prototype/party_assets/mainmenu_middleground.png" id="2_kgdyd"]
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="3_kgdyd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgdyd"]
+bg_color = Color(0.9098039, 0.5411765, 0.21176471, 0.49019608)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cbrh"]
+bg_color = Color(0.9098039, 0.5411765, 0.21176471, 0.49019608)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nswru"]
+bg_color = Color(0.9098039, 0.5411765, 0.21176471, 0.49019608)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="Control" type="Control" unique_id=1319357658]
 layout_mode = 3
@@ -10,13 +41,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6cbrh")
 
-[node name="MainmenuBackground" type="Sprite2D" parent="." unique_id=981166152]
+[node name="Background" type="Sprite2D" parent="." unique_id=981166152]
 position = Vector2(574.5, 323.5)
 scale = Vector2(1.0025862, 1.0138462)
 texture = ExtResource("1_22m7w")
 
-[node name="MainmenuMiddleground" type="Sprite2D" parent="." unique_id=234254428]
-position = Vector2(573.00006, 323.5)
-scale = Vector2(0.99482775, 0.99230766)
+[node name="Balloons" type="Sprite2D" parent="." unique_id=234254428]
+position = Vector2(574.5, 323.5)
+scale = Vector2(1.003, 1)
 texture = ExtResource("2_kgdyd")
+
+[node name="Text" type="RichTextLabel" parent="." unique_id=678224968]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 77.0
+offset_right = 1056.0
+offset_bottom = 329.0
+theme_override_colors/default_color = Color(0.93333334, 0.70980394, 0.6117647, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("3_kgdyd")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave]You got ready in time!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="playagain_button" type="Button" parent="." unique_id=1949812947]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 312.0
+offset_right = 807.0
+offset_bottom = 481.0
+theme_override_colors/font_color = Color(0.83137256, 0.5019608, 0.73333335, 1)
+theme_override_colors/font_pressed_color = Color(0.56078434, 0.8156863, 0.19607843, 1)
+theme_override_colors/font_hover_color = Color(0.56078434, 0.8156863, 0.19607843, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("3_kgdyd")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgdyd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6cbrh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nswru")
+text = "PLAY AGAIN"
+
+[connection signal="pressed" from="playagain_button" to="." method="_on_playagain_button_pressed"]

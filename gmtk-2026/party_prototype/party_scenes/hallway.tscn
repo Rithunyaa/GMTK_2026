@@ -247,7 +247,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1198076294]
-position = Vector2(1758, 265)
+position = Vector2(1647, 317)
 script = ExtResource("4_6r7v0")
 speed = 320
 metadata/_edit_group_ = true

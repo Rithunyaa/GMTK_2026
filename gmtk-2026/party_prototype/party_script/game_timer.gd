@@ -6,6 +6,11 @@ signal time_finished
 var time_left = 50.0
 var running = true
 var previous_scene: String = ""
+var party_ready = false
+var laundry_done = false
+var chips_done = false
+var balloons_done = false
+var banners_done = false
 
 
 func _process(delta):

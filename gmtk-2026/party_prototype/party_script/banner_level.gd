@@ -155,6 +155,7 @@ func randomize_banners():
 func finish_task():
 
 	print("Banners finished!")
+	GameTimer.banners_done = true
 
 	get_tree().change_scene_to_file(
 		"res://party_prototype/party_scenes/living_room.tscn"
