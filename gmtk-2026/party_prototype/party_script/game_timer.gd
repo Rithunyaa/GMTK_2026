@@ -2,6 +2,8 @@ extends Node
 
 signal time_updated
 signal time_finished
+var show_intro = false
+var game_active = false
 
 var time_left = 60.0
 var running = true

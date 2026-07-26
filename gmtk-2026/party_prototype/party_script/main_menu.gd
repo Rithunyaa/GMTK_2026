@@ -22,7 +22,7 @@ func _input(event):
 func start_game():
 
 	started = true
-
+	GameTimer.show_intro = true
 	get_tree().change_scene_to_file(
 		"res://party_prototype/party_scenes/Bedroom.tscn"
 	)
