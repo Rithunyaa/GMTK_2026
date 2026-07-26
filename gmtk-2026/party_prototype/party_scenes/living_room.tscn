@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ditsalpnnyu14" path="res://party_prototype/party_assets/banner_level/purple_banner.png" id="15_070ry"]
 [ext_resource type="Texture2D" uid="uid://b5m0v0ia3286t" path="res://party_prototype/party_assets/balloon_level/balloons.png" id="16_070ry"]
 [ext_resource type="Texture2D" uid="uid://ctyx7n1mxe4cn" path="res://party_prototype/party_assets/balloon_level/banners.png" id="17_r7fil"]
+[ext_resource type="Texture2D" uid="uid://b211gw75s7q30" path="res://party_prototype/party_assets/balloon_level/filled_bowl.png" id="18_tsh0a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ix5o2"]
 size = Vector2(125, 193)
@@ -450,3 +451,8 @@ z_index = 20
 position = Vector2(800, 400)
 scale = Vector2(8, 8)
 texture = ExtResource("17_r7fil")
+
+[node name="Finished_Bowl" type="Sprite2D" parent="." unique_id=1085872795]
+position = Vector2(119, 570)
+scale = Vector2(8, 8)
+texture = ExtResource("18_tsh0a")

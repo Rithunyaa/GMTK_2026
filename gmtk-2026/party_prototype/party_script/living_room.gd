@@ -3,6 +3,7 @@ extends Node2D
 @onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
 @onready var finished_balloons: Sprite2D = $Finished_Balloons
 @onready var finished_banner: Sprite2D = $Finished_Banner
+@onready var finished_bowl:Sprite2D = $Finished_Bowl
 @onready var banner_taskpoint: Area2D = $BannerTask
 @onready var balloon_taskpoint: Area2D = $BalloonTask
 
@@ -26,6 +27,7 @@ func _ready():
 
 	finished_balloons.visible = GameTimer.balloons_done
 	finished_banner.visible = GameTimer.banners_done
+	finished_bowl.visible = GameTimer.chips_done
 
 	balloon_taskpoint.visible = not GameTimer.balloons_done
 	banner_taskpoint.visible = not GameTimer.banners_done
