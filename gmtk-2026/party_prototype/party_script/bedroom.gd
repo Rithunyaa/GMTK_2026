@@ -8,7 +8,7 @@ extends Node2D
 
 
 var dialogue_message = "The party is starting soon! We need to finish everything before the timer runs out!
-(click anywhere to start)
+(press E to continue)
 "
 
 var typing = false
@@ -49,8 +49,8 @@ func _ready():
 		
 	# still we need GameTimer.show_intro
 	# mayber passing "main_menu" via previous_scene is a bad idea
-	if not GameTimer.show_intro:
-			start_game()
+	#if not GameTimer.show_intro:
+			#start_game()
 
 
 	GameTimer.previous_scene = "bedroom"
@@ -98,6 +98,16 @@ func _process(delta):
 		if auto_timer >= auto_start_time:
 
 			close_intro()
+	
+	if Input.is_action_just_pressed("interact"):
+		
+		if typing:
+
+			finish_text()
+
+		elif waiting_to_close:
+
+			close_intro()
 
 
 
@@ -120,21 +130,21 @@ func type_text():
 
 
 
-func _input(event):
-
-	if event is InputEventMouseButton:
-
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-
-
-			if typing:
-
-				finish_text()
-
-
-			elif waiting_to_close:
-
-				close_intro()
+#func _input(event):
+#
+	#if event is InputEventMouseButton:
+#
+		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+#
+#
+			#if typing:
+#
+				#finish_text()
+#
+#
+			#elif waiting_to_close:
+#
+				#close_intro()
 
 
 
@@ -157,21 +167,21 @@ func close_intro():
 	GameTimer.show_intro = false
 	waiting_to_close = false
 
-	start_game()
+	#start_game()
 	GameTimer.reset_timer()
 
 
 
-func start_game():
-
-	GameTimer.game_active = true
-	dialogue_text.add_theme_constant_override("outline_size", 30)
-	dialogue_text.visible = true
-	
-	dialogue_text.text = "Click the laundry basket (highlighted white)"
-
-	#it is a bug,timer shouldnt be reset everytime whenever player enter
-	#GameTimer.reset_timer()
+#func start_game():
+#
+	#GameTimer.game_active = true
+	#dialogue_text.add_theme_constant_override("outline_size", 30)
+	#dialogue_text.visible = true
+	#
+	#dialogue_text.text = "Click the laundry basket (highlighted white)"
+#
+	##it is a bug,timer shouldnt be reset everytime whenever player enter
+	##GameTimer.reset_timer()
 
 
 
