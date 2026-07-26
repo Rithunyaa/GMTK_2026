@@ -310,7 +310,7 @@ debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=420440946]
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_mh50a")
-animation = &"walk_down"
+animation = &"idle_up"
 autoplay = "idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1259847797]
@@ -430,13 +430,17 @@ debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 
 [node name="Finished_Balloons" type="Sprite2D" parent="." unique_id=42811403]
 visible = false
+z_index = 10
 position = Vector2(1481, 648)
 scale = Vector2(8, 8)
 texture = ExtResource("16_070ry")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Finished_Balloons" unique_id=24419255]
+process_mode = 4
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Finished_Balloons/StaticBody2D" unique_id=1073642419]
+visible = false
 position = Vector2(-0.3125, -5.8125)
 shape = SubResource("RectangleShape2D_51gdu")
 debug_color = Color(0.49857742, 0.43231258, 1, 0.41960785)
