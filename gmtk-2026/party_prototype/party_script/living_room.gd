@@ -37,14 +37,14 @@ func _ready():
 
 
 	# Instructions
-	if GameTimer.balloons_done and GameTimer.banners_done:
+	#if GameTimer.balloons_done and GameTimer.banners_done:
 
-		instructions_text.visible = false
+		#instructions_text.visible = false
 
-	else:
+	#else:
 
-		instructions_text.text = "Click any object highlighted white"
-		instructions_text.visible = true
+		#instructions_text.text = "Click any object highlighted white"
+		#instructions_text.visible = true
 
 func update_timer():
 	timer_label.text = "[shake level=6]Party starts in: " + GameTimer.get_time_text()

@@ -16,13 +16,13 @@ func _ready():
 		"kitchen":
 			player.position = Vector2(1100,523)
 
-			instruction.text = "Head right (into the living room)"
+			#instruction.text = "Head right (into the living room)"
 
 		"living_room":
 			player.position = Vector2(95,332)
 
-		_:
-			instruction.text = "Head into the first room on the bottom."
+		#_:
+			#instruction.text = "Head into the first room on the bottom."
 
 
 	GameTimer.previous_scene = "hallway"

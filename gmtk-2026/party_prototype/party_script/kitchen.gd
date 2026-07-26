@@ -17,14 +17,14 @@ func _ready():
 			player.position = Vector2(805,392)
 
 			# Came back after completing chips
-			instruction_text.text = "Head into the hallway"
-			instruction_text.visible = true
-
-
-		_:
+			#instruction_text.text = "Head into the hallway"
+			#instruction_text.visible = true
+#
+#
+		#_:
 			# First time entering kitchen
-			instruction_text.text = "Click the bowl (highlighted white)"
-			instruction_text.visible = true
+			#instruction_text.text = "Click the bowl (highlighted white)"
+			#instruction_text.visible = true
 
 
 	GameTimer.previous_scene = "kitchen"
