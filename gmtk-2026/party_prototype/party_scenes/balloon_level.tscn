@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dap2ffdwumtk4"]
 
-[ext_resource type="Script" path="res://party_prototype/party_script/balloon_level.gd" id="1_x1nrs"]
+[ext_resource type="Script" uid="uid://dgw0f3kqv2q3l" path="res://party_prototype/party_script/balloon_level.gd" id="1_x1nrs"]
 [ext_resource type="Texture2D" uid="uid://cyqvbk4s3idkr" path="res://party_prototype/party_assets/livingroom_background.png" id="2_8w6ge"]
 [ext_resource type="PackedScene" uid="uid://cem5yafscs5qs" path="res://party_prototype/party_scenes/balloon.tscn" id="5_8w6ge"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="5_ri163"]
@@ -53,6 +53,19 @@ position = Vector2(913, 300)
 
 [node name="Balloon" parent="Balloon3" index="2" unique_id=893512970]
 texture = ExtResource("7_lpwqg")
+
+[node name="Instructions" type="RichTextLabel" parent="." unique_id=1054207090]
+offset_left = 103.0
+offset_top = -66.0
+offset_right = 1041.0
+offset_bottom = 186.0
+theme_override_colors/default_color = Color(0.98139364, 0.91472924, 0.8861487, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("5_ri163")
+theme_override_font_sizes/normal_font_size = 40
+text = "Click when balloons are right size (green)"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [editable path="Balloon2"]
 [editable path="Balloon3"]

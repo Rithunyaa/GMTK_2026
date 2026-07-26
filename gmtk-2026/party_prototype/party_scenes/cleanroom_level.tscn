@@ -109,6 +109,19 @@ stream = ExtResource("8_yuu7c")
 
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("9_m2xny")]
 
+[node name="Instructions" type="RichTextLabel" parent="." unique_id=258899971]
+offset_left = 103.0
+offset_top = -66.0
+offset_right = 1041.0
+offset_bottom = 186.0
+theme_override_colors/default_color = Color(0.98139364, 0.91472924, 0.8861487, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("7_701n2")
+theme_override_font_sizes/normal_font_size = 40
+text = "Drag the dirty clothes into the laundry bin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="area_entered" from="LaundryBasket" to="LaundryBasket" method="_on_area_entered"]
 [connection signal="body_entered" from="LaundryBasket" to="LaundryBasket" method="_on_body_entered"]
 [connection signal="timeout" from="PartyTimer" to="." method="_on_party_timer_timeout"]

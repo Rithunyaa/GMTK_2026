@@ -1,6 +1,7 @@
 extends Area2D
 
 var player_near = false
+@onready var instructions: RichTextLabel = $"../CanvasLayer/RichTextLabel"
 
 
 func _ready():
@@ -37,5 +38,7 @@ func _on_player_exited(body):
 
 
 func start_laundry_task():
+	
 	await get_parent().get_node("DarkScreen").darker()
+	instructions.visible = false
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/cleanroom_level.tscn")

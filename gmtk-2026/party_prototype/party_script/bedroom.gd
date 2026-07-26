@@ -23,6 +23,7 @@ func _ready():
 
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
+	
 
 
 	# Spawn player correctly
@@ -35,6 +36,7 @@ func _ready():
 
 		"laundry_task":
 			player.position = Vector2(329,425)
+			dialogue_text.text = "Leave the bedroom (door is below yellow rug)"
 
 		"kitchen":
 			player.position = Vector2(987, 577)
@@ -148,6 +150,10 @@ func close_intro():
 func start_game():
 
 	GameTimer.game_active = true
+	dialogue_text.add_theme_constant_override("outline_size", 30)
+	dialogue_text.visible = true
+	
+	dialogue_text.text = "Click the laundry basket (highlighted white)"
 
 	GameTimer.reset_timer()
 

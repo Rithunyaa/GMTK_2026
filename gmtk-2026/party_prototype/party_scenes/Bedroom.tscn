@@ -210,7 +210,7 @@ size = Vector2(313, 278)
 size = Vector2(161, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6st"]
-size = Vector2(422, 43)
+size = Vector2(422, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3wf"]
 size = Vector2(855, 48)
@@ -269,6 +269,7 @@ offset_top = 48.0
 offset_right = 995.0
 offset_bottom = 231.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_4vawo")
 theme_override_font_sizes/normal_font_size = 30
 text = "OH NO... I totally forgot about the party today! I only have 1 minute to get ready for it!"
@@ -311,7 +312,7 @@ scale = Vector2(1, 1.0000005)
 polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.24997, 118.75, -84.24997, 124.75, -40.25, 161.75, -24.25, 162.75, 10.75, 178.75, 41.75, 144.75, 60.74994, 119.75, 65.74994, 116.75, 83.74994, 93.75, 101.74994, 44.75, 100.74994, 23.75, 97.74994, -28.25, 101.74994, -90.25, 106.74994, -122.25, 75.74994, -38.25, 18.75, -63.25, -47.24997)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
-position = Vector2(568, 435)
+position = Vector2(403, 300)
 script = ExtResource("6_darn4")
 metadata/_edit_group_ = true
 
@@ -349,7 +350,7 @@ shape = SubResource("RectangleShape2D_7jf5o")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Furniture/Walls" unique_id=1246427529]
-position = Vector2(649, -30)
+position = Vector2(649, -40.75)
 shape = SubResource("RectangleShape2D_7o6st")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 

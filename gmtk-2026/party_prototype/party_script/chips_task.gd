@@ -1,6 +1,7 @@
 extends Area2D
 
 var player_near = false
+@onready var instructions: RichTextLabel = $"../CanvasLayer/Instructions"
 
 
 func _input_event(viewport, event, shape_idx):
@@ -11,4 +12,5 @@ func _input_event(viewport, event, shape_idx):
 
 func start_laundry_task():
 	await get_parent().get_node("DarkScreen").darker()
+	instructions.visible = false
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/chips_level.tscn")

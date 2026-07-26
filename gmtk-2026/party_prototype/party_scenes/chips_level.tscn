@@ -35,10 +35,10 @@ debug_color = Color(0.93127424, 2.8300881e-05, 0.6554483, 0.41960785)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=15911850]
 
 [node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=972744923]
-offset_left = 10.0
-offset_top = 9.0
-offset_right = 1148.0
-offset_bottom = 73.0
+offset_left = 359.0
+offset_top = 11.0
+offset_right = 1497.0
+offset_bottom = 75.0
 theme_override_colors/font_outline_color = Color(0.2200064, 2.481742e-07, 6.016344e-08, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 20
@@ -67,3 +67,16 @@ scale = Vector2(8.430598, 23.949976)
 points = PackedVector2Array(-148.863, -10, -94.77384, -9.770361)
 width = 1.0
 default_color = Color(0.35315913, 0.26401472, 0.08896316, 1)
+
+[node name="Instructions" type="RichTextLabel" parent="." unique_id=88785223]
+offset_left = -211.0
+offset_top = -83.0
+offset_right = 727.0
+offset_bottom = 169.0
+theme_override_colors/default_color = Color(0.98139364, 0.91472924, 0.8861487, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("3_uceqd")
+theme_override_font_sizes/normal_font_size = 40
+text = "Click to add chips into bowl"
+horizontal_alignment = 1
+vertical_alignment = 1
