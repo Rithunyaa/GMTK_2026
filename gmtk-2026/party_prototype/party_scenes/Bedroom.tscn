@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="1_4vawo"]
 [ext_resource type="Script" uid="uid://c7snwx1274ss0" path="res://party_prototype/party_script/bedroom.gd" id="1_8vs60"]
 [ext_resource type="Texture2D" uid="uid://d24wmi7tavtsl" path="res://party_prototype/party_assets/laundry_level/bedroom.png" id="3_8vs60"]
+[ext_resource type="Texture2D" uid="uid://blctycxr4410i" path="res://party_prototype/party_assets/dialogue.png" id="3_fp2x3"]
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="5_5x8wb"]
 [ext_resource type="Script" uid="uid://c7047r1w0rtw0" path="res://party_prototype/party_script/laundry_task.gd" id="5_flaea"]
 [ext_resource type="Script" uid="uid://bavajfqgjojdw" path="res://party_prototype/party_script/player.gd" id="6_darn4"]
@@ -255,24 +256,21 @@ text = "[shake level=6]Party starts in: 60 secs"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=590404293]
-visible = false
-offset_left = 164.0
-offset_top = 48.0
-offset_right = 1013.0
-offset_bottom = 231.0
+[node name="ColorRect" type="Sprite2D" parent="CanvasLayer" unique_id=661088255]
+position = Vector2(576, 145)
+scale = Vector2(8, 8)
+texture = ExtResource("3_fp2x3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=656180394]
-visible = false
-offset_left = 194.0
+offset_left = 208.0
 offset_top = 48.0
-offset_right = 995.0
-offset_bottom = 231.0
+offset_right = 944.0
+offset_bottom = 242.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_4vawo")
 theme_override_font_sizes/normal_font_size = 30
-text = "OH NO... I totally forgot about the party today! I only have 1 minute to get ready for it!"
+text = "OH NO... I totally forgot about the party today! I only have 40 seconds to get ready for it!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
