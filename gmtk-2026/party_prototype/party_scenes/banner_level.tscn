@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfpkhbnsp3rwo" path="res://party_prototype/party_scenes/banner.tscn" id="2_ay4j1"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="4_4xuvy"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="5_3kqno"]
+[ext_resource type="Texture2D" uid="uid://bufnvyxj86tkp" path="res://party_prototype/party_assets/tick.png" id="6_3kqno"]
 
 [node name="BannerLevel" type="Node2D" unique_id=1225873329]
 script = ExtResource("1_d0uhn")
@@ -83,3 +84,10 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Click to match the colors together"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Tick" type="Sprite2D" parent="." unique_id=1352939454]
+visible = false
+z_index = 20
+position = Vector2(576, 324)
+scale = Vector2(8, 8)
+texture = ExtResource("6_3kqno")

@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="3_uceqd"]
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="4_661nn"]
 [ext_resource type="Texture2D" uid="uid://bxky786ob8rn0" path="res://party_prototype/party_assets/chip_level/spotted_line.png" id="5_wjwi8"]
+[ext_resource type="Texture2D" uid="uid://bufnvyxj86tkp" path="res://party_prototype/party_assets/tick.png" id="8_wjwi8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uceqd"]
 size = Vector2(60, 1.313)
@@ -80,3 +81,10 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Click to add chips into bowl"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Tick" type="Sprite2D" parent="." unique_id=175498439]
+visible = false
+z_index = 20
+position = Vector2(576, 324)
+scale = Vector2(8, 8)
+texture = ExtResource("8_wjwi8")

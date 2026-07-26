@@ -43,6 +43,8 @@ func finish_task():
 
 	print("All balloons finished!")
 	GameTimer.balloons_done = true
+	$Tick.show()
+	await $DarkScreen.darker()
 	get_tree().change_scene_to_file(
 		"res://party_prototype/party_scenes/living_room.tscn"
 	)
