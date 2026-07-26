@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmoqdtx67jkv3" path="res://party_prototype/party_assets/mainmenu_background.png" id="1_22m7w"]
 [ext_resource type="Texture2D" uid="uid://dncoibvcfqx6x" path="res://party_prototype/party_assets/mainmenu_middleground.png" id="2_kgdyd"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="3_kgdyd"]
+[ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="5_nswru"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgdyd"]
 bg_color = Color(0.9098039, 0.5411765, 0.21176471, 0.49019608)
@@ -84,5 +85,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kgdyd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_6cbrh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nswru")
 text = "PLAY AGAIN"
+
+[node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("5_nswru")]
 
 [connection signal="pressed" from="playagain_button" to="." method="_on_playagain_button_pressed"]
