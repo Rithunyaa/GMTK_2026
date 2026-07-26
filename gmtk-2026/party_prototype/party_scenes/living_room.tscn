@@ -259,9 +259,9 @@ size = Vector2(20.625, 45.375)
 script = ExtResource("1_wxv7u")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=477184155]
-position = Vector2(801, 777)
 scale = Vector2(8, 8)
 texture = ExtResource("1_f51lu")
+centered = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1343319156]
 
@@ -317,7 +317,7 @@ autoplay = "idle_down"
 limit_left = 0
 limit_top = 0
 limit_right = 1600
-limit_bottom = 1545
+limit_bottom = 1544
 
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("9_070ry")]
 

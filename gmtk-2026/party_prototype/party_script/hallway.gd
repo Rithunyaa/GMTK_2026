@@ -18,6 +18,8 @@ func _ready():
 
 			instruction.text = "Head right (into the living room)"
 
+		"living_room":
+			player.position = Vector2(95,332)
 
 		_:
 			instruction.text = "Head into the first room on the bottom."

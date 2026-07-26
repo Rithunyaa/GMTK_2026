@@ -14,6 +14,16 @@ func _ready():
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
 
+	#spawn layer correctly
+	var player := $Player
+	
+	match GameTimer.previous_scene:
+		
+		"hallway":
+			player.position = Vector2(516,1192)
+	
+	GameTimer.previous_scene = "living_room"
+
 	finished_balloons.visible = GameTimer.balloons_done
 	finished_banner.visible = GameTimer.banners_done
 
