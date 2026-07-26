@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://dp3clf2dovb7j" path="res://party_prototype/party_script/living_room.gd" id="1_wxv7u"]
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="2_ix5o2"]
 [ext_resource type="Texture2D" uid="uid://bxmtrbupnkaq7" path="res://party_prototype/party_assets/character_idle.png" id="4_0bukb"]
-[ext_resource type="PackedScene" uid="uid://yt2m5wxsdyrl" path="res://party_prototype/party_scenes/task_list.tscn" id="4_bubud"]
 [ext_resource type="Script" uid="uid://bavajfqgjojdw" path="res://party_prototype/party_script/player.gd" id="4_wxv7u"]
 [ext_resource type="Texture2D" uid="uid://dwqcnt6oul2wx" path="res://party_prototype/party_assets/character_walk_left.png" id="5_034er"]
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="6_wxv7u"]
@@ -283,7 +282,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Instructions" type="RichTextLabel" parent="CanvasLayer" unique_id=500661732]
-visible = false
 offset_left = 103.0
 offset_top = -66.0
 offset_right = 1041.0
@@ -295,8 +293,6 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Drag the dirty clothes into the laundry bin"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="TaskList" parent="CanvasLayer" unique_id=2012513577 instance=ExtResource("4_bubud")]
 
 [node name="PartyTimer" type="Timer" parent="." unique_id=184786608]
 wait_time = 0.1

@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="3_6t4nt"]
 [ext_resource type="Script" uid="uid://bavajfqgjojdw" path="res://party_prototype/party_script/player.gd" id="4_6r7v0"]
 [ext_resource type="Texture2D" uid="uid://dwqcnt6oul2wx" path="res://party_prototype/party_assets/character_walk_left.png" id="4_attww"]
-[ext_resource type="PackedScene" uid="uid://yt2m5wxsdyrl" path="res://party_prototype/party_scenes/task_list.tscn" id="4_qflsh"]
 [ext_resource type="Texture2D" uid="uid://ccsesje0uuhwi" path="res://party_prototype/party_assets/character_walk_right.png" id="5_6t4nt"]
 [ext_resource type="Texture2D" uid="uid://dqc2pi525olpy" path="res://party_prototype/party_assets/character_walk_up.png" id="6_1aij1"]
 [ext_resource type="Texture2D" uid="uid://dipggtarc8dg1" path="res://party_prototype/party_assets/character_walk_down.png" id="7_baffk"]
@@ -248,7 +247,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Instructions" type="RichTextLabel" parent="CanvasLayer" unique_id=329723351]
-visible = false
 offset_left = 103.0
 offset_top = -66.0
 offset_right = 1041.0
@@ -260,8 +258,6 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Drag the dirty clothes into the laundry bin"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="TaskList" parent="CanvasLayer" unique_id=2012513577 instance=ExtResource("4_qflsh")]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1198076294]
 position = Vector2(1647, 317)

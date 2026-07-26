@@ -3,15 +3,11 @@ extends Area2D
 var player_near = false
 
 
-#func _input_event(_viewport, event, _shape_idx):
-	#if event is InputEventMouseButton:
-		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			#start_balloon_task()
-
-func _process(_delta):
-	for body in get_overlapping_bodies():
-		if body.name == "Player" and Input.is_action_just_pressed("interact"):
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			start_balloon_task()
+
 
 func start_balloon_task():
 	await get_parent().get_node("DarkScreen").darker()

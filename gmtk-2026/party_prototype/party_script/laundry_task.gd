@@ -20,10 +20,10 @@ func _process(_delta):
 		start_laundry_task()
 
 
-#func _input_event(_viewport, event, _shape_idx):
-	#if event is InputEventMouseButton:
-		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			#start_laundry_task()
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			start_laundry_task()
 
 
 func _on_player_entered(body):
