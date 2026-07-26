@@ -7,7 +7,9 @@ extends Node2D
 @onready var dialogue_text: RichTextLabel = $CanvasLayer/RichTextLabel
 
 
-var dialogue_message = "The party is starting soon! We need to finish everything before the timer runs out!"
+var dialogue_message = "The party is starting soon! We need to finish everything before the timer runs out!
+(click anywhere to start)
+"
 
 var typing = false
 var waiting_to_close = false
