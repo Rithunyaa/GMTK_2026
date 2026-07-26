@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://0mrxjb0ya6p6"]
+
+[ext_resource type="AudioStream" uid="uid://oa3nk6gxue5t" path="res://party_prototype/party_assets/audio/shufflin_0.ogg" id="1_inrv5"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=479347161]
+stream = ExtResource("1_inrv5")
+autoplay = true

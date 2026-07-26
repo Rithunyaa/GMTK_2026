@@ -1,0 +1,11 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://cit41b5hchwpj"]
+
+[sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_j3pel"]
+resource_name = "StereoEnhance"
+pan_pullout = 2.0
+time_pullout_ms = 15.0
+surround = 1.0
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectStereoEnhance_j3pel")
+bus/0/effect/0/enabled = true

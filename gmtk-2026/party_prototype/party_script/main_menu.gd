@@ -2,6 +2,7 @@ extends Node
 
 
 var started = false
+var music = preload("res://party_prototype/party_scenes/music.tscn")
 
 
 func _input(event):
@@ -20,6 +21,8 @@ func _input(event):
 
 
 func start_game():
+	#add Music Node
+	get_parent().add_child(music.instantiate())
 
 	started = true
 	GameTimer.show_intro = true
