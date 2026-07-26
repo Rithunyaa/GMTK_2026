@@ -23,6 +23,7 @@ func start_game():
 
 	started = true
 	GameTimer.show_intro = true
+	GameTimer.previous_scene = "main_menu"
 	get_tree().change_scene_to_file(
 		"res://party_prototype/party_scenes/Bedroom.tscn"
 	)

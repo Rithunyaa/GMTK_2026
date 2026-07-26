@@ -42,19 +42,22 @@ func _ready():
 
 		"kitchen":
 			player.position = Vector2(987, 577)
+		
+		"main_menu":
+			start_intro()
 
 
 	GameTimer.previous_scene = "bedroom"
 
 
 	# Intro check
-	if GameTimer.show_intro:
+	#if GameTimer.show_intro:
+#
+		#start_intro()
+#
+	#else:
 
-		start_intro()
-
-	else:
-
-		start_game()
+	start_game()
 
 
 
@@ -147,7 +150,8 @@ func close_intro():
 
 	GameTimer.show_intro = false
 
-	start_game()
+	#start_game()
+	GameTimer.reset_timer()
 
 
 
@@ -159,8 +163,8 @@ func start_game():
 	
 	dialogue_text.text = "Click the laundry basket (highlighted white)"
 
-	#TODO: it is a bug,timer shouldnt be reset everytime when player enter
-	GameTimer.reset_timer()
+	#it is a bug,timer shouldnt be reset everytime whenever player enter
+	#GameTimer.reset_timer()
 
 
 
