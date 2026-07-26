@@ -2,29 +2,36 @@ extends Node
 
 signal time_updated
 signal time_finished
+
 var show_intro = false
 var game_active = false
 
 const LIMITED_TIME = 40.0
+
 var time_left = LIMITED_TIME
 var running = true
 var previous_scene: String = ""
+
 var party_ready = false
+
 var laundry_done = false
 var chips_done = false
 var balloons_done = false
 var banners_done = false
+
 var game_over = false
-var time_used:float = 0
+var time_used: float = 0.0
 
 
 func _process(delta):
+
 	if not running:
 		return
 
 	time_left -= delta
 
 	if time_left <= 0 and !game_over:
+
 		game_over = true
 		time_left = 0
 		running = false
@@ -34,16 +41,18 @@ func _process(delta):
 		)
 
 	time_updated.emit()
-	
-	if GameTimer.laundry_done \
-	and GameTimer.chips_done \
-	and GameTimer.balloons_done \
-	and GameTimer.banners_done \
-	and not time_used:
+
+	if laundry_done \
+	and chips_done \
+	and balloons_done \
+	and banners_done \
+	and time_used == 0:
+
 		time_used = LIMITED_TIME - time_left
 
 
 func get_time_text():
+
 	var minutes = int(time_left) / 60
 	var seconds = int(time_left) % 60
 
@@ -52,11 +61,16 @@ func get_time_text():
 		seconds
 	]
 
+
 func reset_timer():
-		time_left = LIMITED_TIME
-		running = true
-		game_over = false
-		GameTimer.laundry_done = false
-		GameTimer.chips_done = false
-		GameTimer.balloons_done = false
-		GameTimer.banners_done = false
+
+	time_left = LIMITED_TIME
+	running = true
+	game_over = false
+
+	laundry_done = false
+	chips_done = false
+	balloons_done = false
+	banners_done = false
+
+	time_used = 0.0

@@ -4,6 +4,7 @@ extends Node2D
 var completed_balloons = 0
 var current_balloon = 0
 @onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
+@onready var balloon_sound: AudioStreamPlayer2D = $Balloon_sound
 
 
 func _ready():
@@ -27,14 +28,17 @@ func balloon_done():
 		$Balloon1.set_process(false)
 		current_balloon = 1
 		$Balloon2.set_process(true)
+		balloon_sound.play()
 
 	elif current_balloon == 1:
 		$Balloon2.set_process(false)
 		current_balloon = 2
 		$Balloon3.set_process(true)
+		balloon_sound.play()
 
 	else:
 		$Balloon3.set_process(false)
+		balloon_sound.play()
 		finish_task()
 
 

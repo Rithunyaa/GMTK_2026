@@ -7,6 +7,7 @@ var right_banners = []
 var banners = []
 var completed_connections = 0
 @onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
+@onready var banner_sound: AudioStreamPlayer2D = $Banner_sound
 
 
 func _ready():
@@ -46,11 +47,12 @@ func _on_banner_clicked(banner, event):
 			if selected_banner == null and not banner.connected:
 
 				selected_banner = banner
+				banner_sound.play()
 				create_line(banner)
 
 			# Second click
 			else:
-
+				banner_sound.play()
 				finish_line(banner)
 
 

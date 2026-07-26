@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="4_661nn"]
 [ext_resource type="Texture2D" uid="uid://bxky786ob8rn0" path="res://party_prototype/party_assets/chip_level/spotted_line.png" id="5_wjwi8"]
 [ext_resource type="Texture2D" uid="uid://bufnvyxj86tkp" path="res://party_prototype/party_assets/tick.png" id="8_wjwi8"]
+[ext_resource type="AudioStream" uid="uid://dlb2f60c633re" path="res://party_prototype/party_assets/audio/potato_chip.wav" id="9_v7j08"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uceqd"]
 size = Vector2(60, 1.313)
@@ -88,3 +89,6 @@ z_index = 20
 position = Vector2(576, 324)
 scale = Vector2(8, 8)
 texture = ExtResource("8_wjwi8")
+
+[node name="Chips_Sound" type="AudioStreamPlayer2D" parent="." unique_id=704571200]
+stream = ExtResource("9_v7j08")

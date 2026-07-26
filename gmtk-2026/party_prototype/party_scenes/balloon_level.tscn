@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="6_loa77"]
 [ext_resource type="Texture2D" uid="uid://cxs7hbf6wcw7a" path="res://party_prototype/party_assets/balloon_level/balloon_3.png" id="7_lpwqg"]
 [ext_resource type="Texture2D" uid="uid://bufnvyxj86tkp" path="res://party_prototype/party_assets/tick.png" id="8_lpwqg"]
+[ext_resource type="AudioStream" uid="uid://67fpqccdlce2" path="res://party_prototype/party_assets/audio/balloon_fix.mp3" id="9_yht83"]
 
 [node name="InflateBalloons" type="Node2D" unique_id=1023644162]
 script = ExtResource("1_x1nrs")
@@ -74,6 +75,9 @@ z_index = 20
 position = Vector2(576, 324)
 scale = Vector2(8, 8)
 texture = ExtResource("8_lpwqg")
+
+[node name="Balloon_sound" type="AudioStreamPlayer2D" parent="." unique_id=223735578]
+stream = ExtResource("9_yht83")
 
 [editable path="Balloon2"]
 [editable path="Balloon3"]

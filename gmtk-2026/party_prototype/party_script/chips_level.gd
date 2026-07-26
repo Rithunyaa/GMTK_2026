@@ -7,6 +7,7 @@ extends Node2D
 @onready var fill_line: Line2D = $FillLine
 @onready var bowl_area: Area2D = $Bowl/BowlArea
 @onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
+@onready var chips_sound: AudioStreamPlayer2D = $Chips_Sound
 
 
 var fill_amount = 0
@@ -64,6 +65,8 @@ func _on_chip_entered(area):
 		fill_line.position.y -= 10
 		
 		area.call_deferred("queue_free")
+		chips_sound.play()
+		
 
 		check_finished()
 
