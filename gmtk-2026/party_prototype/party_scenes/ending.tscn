@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://baw20qg51mx3l"]
+
+[ext_resource type="Texture2D" uid="uid://bmoqdtx67jkv3" path="res://party_prototype/party_assets/mainmenu_background.png" id="1_22m7w"]
+[ext_resource type="Texture2D" uid="uid://dncoibvcfqx6x" path="res://party_prototype/party_assets/mainmenu_middleground.png" id="2_kgdyd"]
+
+[node name="Control" type="Control" unique_id=1319357658]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainmenuBackground" type="Sprite2D" parent="." unique_id=981166152]
+position = Vector2(574.5, 323.5)
+scale = Vector2(1.0025862, 1.0138462)
+texture = ExtResource("1_22m7w")
+
+[node name="MainmenuMiddleground" type="Sprite2D" parent="." unique_id=234254428]
+position = Vector2(573.00006, 323.5)
+scale = Vector2(0.99482775, 0.99230766)
+texture = ExtResource("2_kgdyd")

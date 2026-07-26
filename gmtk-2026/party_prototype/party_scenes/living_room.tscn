@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://bbow1hb1u4tm4" path="res://party_prototype/party_script/hallway_transition.gd" id="11_034er"]
 [ext_resource type="Script" uid="uid://b07d1jf0jkth" path="res://party_prototype/party_script/balloon_task.gd" id="12_q0b67"]
 [ext_resource type="Texture2D" uid="uid://ck78xiklbdyya" path="res://party_prototype/party_assets/balloon_level/balloon_taskpoint.png" id="12_wxv7u"]
+[ext_resource type="Script" uid="uid://cg7f6lvnernpn" path="res://party_prototype/party_script/banner_task.gd" id="14_ktn3y"]
+[ext_resource type="Texture2D" uid="uid://ditsalpnnyu14" path="res://party_prototype/party_assets/banner_level/purple_banner.png" id="15_070ry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ix5o2"]
 size = Vector2(125, 193)
@@ -210,7 +212,7 @@ size = Vector2(1019, 255.5)
 size = Vector2(84, 937)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0b67"]
-size = Vector2(817.25, 74.5)
+size = Vector2(817.25, 111)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ktn3y"]
 size = Vector2(127, 1604)
@@ -240,9 +242,13 @@ size = Vector2(1626, 54)
 size = Vector2(24, 60.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpj8d"]
+size = Vector2(105, 229)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_51gdu"]
 radius = 66.068146
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r7fil"]
+radius = 100.005
 
 [node name="LivingRoom" type="Node2D" unique_id=1507635538]
 script = ExtResource("1_wxv7u")
@@ -275,7 +281,7 @@ autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1407059028]
 z_index = 2
-position = Vector2(352, 1419)
+position = Vector2(350, 1305)
 script = ExtResource("4_wxv7u")
 speed = 320
 metadata/_edit_group_ = true
@@ -318,7 +324,7 @@ shape = SubResource("RectangleShape2D_wxv7u")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
 [node name="Wall2" type="CollisionShape2D" parent="Collision/StaticBody2D" unique_id=1102012945]
-position = Vector2(348.625, 1588.75)
+position = Vector2(348.625, 1570.5)
 shape = SubResource("RectangleShape2D_q0b67")
 debug_color = Color(1, 0, 0.11764706, 0.41960785)
 
@@ -376,6 +382,7 @@ debug_color = Color(1, 0, 0.11764706, 0.41960785)
 script = ExtResource("11_034er")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HallwayTransition" unique_id=1929287430]
+position = Vector2(625.5, 1224.5)
 shape = SubResource("RectangleShape2D_fpj8d")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 
@@ -390,4 +397,16 @@ texture = ExtResource("12_wxv7u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BalloonTask" unique_id=96849737]
 position = Vector2(1233, 401)
 shape = SubResource("CircleShape2D_51gdu")
+debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
+
+[node name="BannerTask" type="Area2D" parent="." unique_id=1344262264]
+script = ExtResource("14_ktn3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="BannerTask" unique_id=1845423296]
+position = Vector2(93, 1290)
+texture = ExtResource("15_070ry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BannerTask" unique_id=1674159940]
+position = Vector2(92, 1276)
+shape = SubResource("CircleShape2D_r7fil")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)

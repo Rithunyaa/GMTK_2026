@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cfpkhbnsp3rwo"]
+
+[ext_resource type="Script" uid="uid://plix6u2bisce" path="res://party_prototype/party_script/banner.gd" id="1_yr081"]
+[ext_resource type="Texture2D" uid="uid://bcffjklhx618k" path="res://party_prototype/party_assets/banner_level/red_banner.png" id="2_vbxqq"]
+[ext_resource type="Texture2D" uid="uid://cdye4colki3xn" path="res://party_prototype/party_assets/banner_level/blue_banner.png" id="3_chfeq"]
+[ext_resource type="Texture2D" uid="uid://dmgmmaqomxipg" path="res://party_prototype/party_assets/banner_level/pink_banner.png" id="4_p2s5x"]
+[ext_resource type="Texture2D" uid="uid://ditsalpnnyu14" path="res://party_prototype/party_assets/banner_level/purple_banner.png" id="5_fxx6j"]
+
+[node name="Banner" type="Area2D" unique_id=233695929]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_yr081")
+banner_color = "pink"
+red_texture = ExtResource("2_vbxqq")
+blue_texture = ExtResource("3_chfeq")
+pink_texture = ExtResource("4_p2s5x")
+purple_texture = ExtResource("5_fxx6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=44771028]
+texture = ExtResource("2_vbxqq")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=149497433]
+polygon = PackedVector2Array(-74, -84, 71, -83, -1, 86)

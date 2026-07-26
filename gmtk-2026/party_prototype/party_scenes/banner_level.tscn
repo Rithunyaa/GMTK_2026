@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://br6g5cqgvskfi"]
+
+[ext_resource type="Texture2D" uid="uid://cyqvbk4s3idkr" path="res://party_prototype/party_assets/livingroom_background.png" id="1_5egod"]
+[ext_resource type="Script" uid="uid://c8xycdooutaru" path="res://party_prototype/party_script/banner_level.gd" id="1_d0uhn"]
+[ext_resource type="PackedScene" uid="uid://cfpkhbnsp3rwo" path="res://party_prototype/party_scenes/banner.tscn" id="2_ay4j1"]
+[ext_resource type="FontFile" uid="uid://cbgmo7ntnw584" path="res://party_prototype/party_assets/pirkkala.ttf" id="4_4xuvy"]
+[ext_resource type="PackedScene" uid="uid://c2xbxq8umjmlu" path="res://party_prototype/party_scenes/dark_screen.tscn" id="5_3kqno"]
+
+[node name="BannerLevel" type="Node2D" unique_id=1225873329]
+script = ExtResource("1_d0uhn")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=775063502]
+position = Vector2(574, 325)
+scale = Vector2(8, 8)
+texture = ExtResource("1_5egod")
+
+[node name="Banners" type="Node2D" parent="." unique_id=277139396]
+
+[node name="LeftBlue" parent="Banners" unique_id=233695929 instance=ExtResource("2_ay4j1")]
+position = Vector2(89, 99)
+banner_color = "blue"
+
+[node name="LeftPurple" parent="Banners" unique_id=1257075843 instance=ExtResource("2_ay4j1")]
+position = Vector2(176, 230)
+banner_color = "purple"
+
+[node name="LeftPink" parent="Banners" unique_id=1226884132 instance=ExtResource("2_ay4j1")]
+position = Vector2(105, 391)
+
+[node name="LeftRed" parent="Banners" unique_id=954402341 instance=ExtResource("2_ay4j1")]
+position = Vector2(199, 543)
+banner_color = "red"
+
+[node name="Right3" parent="Banners" unique_id=109765199 instance=ExtResource("2_ay4j1")]
+position = Vector2(1037, 398)
+
+[node name="Right1" parent="Banners" unique_id=1128423318 instance=ExtResource("2_ay4j1")]
+position = Vector2(1069, 97)
+banner_color = "purple"
+
+[node name="Right2" parent="Banners" unique_id=1799466664 instance=ExtResource("2_ay4j1")]
+position = Vector2(989, 237)
+banner_color = "red"
+
+[node name="Right4" parent="Banners" unique_id=1739019499 instance=ExtResource("2_ay4j1")]
+position = Vector2(991, 539)
+banner_color = "blue"
+
+[node name="Lines" type="Node2D" parent="." unique_id=253724037]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1155265871]
+
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1795526427]
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 1148.0
+offset_bottom = 73.0
+theme_override_colors/font_outline_color = Color(0.2200064, 2.481742e-07, 6.016344e-08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("4_4xuvy")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[shake level=6]Party starts in: 30 secs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyTimer" type="Timer" parent="." unique_id=1771707505]
+wait_time = 0.1
+autostart = true
+
+[node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("5_3kqno")]
