@@ -3,7 +3,7 @@ extends Node2D
 
 @onready var timer_label: RichTextLabel = $CanvasLayer/TimerLabel
 
-@onready var dialogue_box: ColorRect = $CanvasLayer/ColorRect
+@onready var dialogue_box := $CanvasLayer/ColorRect
 @onready var dialogue_text: RichTextLabel = $CanvasLayer/RichTextLabel
 
 
