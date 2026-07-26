@@ -293,6 +293,7 @@ script = ExtResource("5_flaea")
 position = Vector2(160, 535)
 scale = Vector2(8, 8)
 texture = ExtResource("11_7o6st")
+hframes = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LaundryTask" unique_id=1761808678]
 

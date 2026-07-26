@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmdje46grw38u"
-path="res://.godot/imported/blue_banner.png-0758f10e07393768e4ccf3ed91c6db05.ctex"
+uid="uid://b111i5tpcbt6q"
+path="res://.godot/imported/banner_taskpoint.png-8e8f8f9777b1fb7a1b67abe60b45b629.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/banner_level/blue_banner.png"
-dest_files=["res://.godot/imported/blue_banner.png-0758f10e07393768e4ccf3ed91c6db05.ctex"]
+source_file="res://party_prototype/party_assets/banner_level/banner_taskpoint.png"
+dest_files=["res://.godot/imported/banner_taskpoint.png-8e8f8f9777b1fb7a1b67abe60b45b629.ctex"]
 
 [params]
 

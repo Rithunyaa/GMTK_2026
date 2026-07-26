@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmdje46grw38u"
-path="res://.godot/imported/blue_banner.png-0758f10e07393768e4ccf3ed91c6db05.ctex"
+uid="uid://b211gw75s7q30"
+path="res://.godot/imported/filled_bowl.png-eb18b449a555281fe2a3d9d30febaf02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/banner_level/blue_banner.png"
-dest_files=["res://.godot/imported/blue_banner.png-0758f10e07393768e4ccf3ed91c6db05.ctex"]
+source_file="res://party_prototype/party_assets/balloon_level/filled_bowl.png"
+dest_files=["res://.godot/imported/filled_bowl.png-eb18b449a555281fe2a3d9d30febaf02.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmdje46grw38u"
-path="res://.godot/imported/blue_banner.png-0758f10e07393768e4ccf3ed91c6db05.ctex"
+uid="uid://dajnv3fn07amb"
+path="res://.godot/imported/hackclub_banner(have two on banners).png-369c26089f08a76c77945306566fccc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://party_prototype/party_assets/banner_level/blue_banner.png"
-dest_files=["res://.godot/imported/blue_banner.png-0758f10e07393768e4ccf3ed91c6db05.ctex"]
+source_file="res://party_prototype/party_assets/banner_level/hackclub_banner(have two on banners).png"
+dest_files=["res://.godot/imported/hackclub_banner(have two on banners).png-369c26089f08a76c77945306566fccc4.ctex"]
 
 [params]
 
