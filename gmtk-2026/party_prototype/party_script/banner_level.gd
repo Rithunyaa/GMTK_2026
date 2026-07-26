@@ -24,7 +24,7 @@ func _ready():
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
 	
-	GameTimer.previous_scene = "chips_task"
+	GameTimer.previous_scene = "banners_task"
 
 
 func _process(delta):

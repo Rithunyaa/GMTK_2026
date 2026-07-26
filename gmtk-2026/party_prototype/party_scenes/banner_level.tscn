@@ -72,10 +72,10 @@ autostart = true
 [node name="DarkScreen" parent="." unique_id=1022712175 instance=ExtResource("5_3kqno")]
 
 [node name="Instructions" type="RichTextLabel" parent="." unique_id=1378432187]
-offset_left = 83.0
-offset_top = 456.0
-offset_right = 1021.0
-offset_bottom = 708.0
+offset_left = 186.0
+offset_top = 501.0
+offset_right = 925.0
+offset_bottom = 678.0
 theme_override_colors/default_color = Color(0.98139364, 0.91472924, 0.8861487, 1)
 theme_override_constants/outline_size = 30
 theme_override_fonts/normal_font = ExtResource("4_4xuvy")
