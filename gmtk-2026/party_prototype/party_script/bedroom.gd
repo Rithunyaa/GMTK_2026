@@ -166,7 +166,7 @@ func close_intro():
 
 	GameTimer.show_intro = false
 
-	start_game()
+	#start_game()
 	GameTimer.reset_timer()
 
 
