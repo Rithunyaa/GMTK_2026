@@ -147,9 +147,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_darn4")
 }],
-"loop": false,
+"loop": true,
 "name": &"walk_down",
-"speed": 6.7
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -166,7 +166,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 6.7
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -183,7 +183,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -198,9 +198,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_16ce0")
 }],
-"loop": false,
+"loop": true,
 "name": &"walk_up",
-"speed": 6.7
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flaea"]
@@ -313,7 +313,6 @@ polygon = PackedVector2Array(-59.25, -80.24997, 11.75, -102.24997, 78.75, -103.2
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1586059009]
 position = Vector2(568, 435)
 script = ExtResource("6_darn4")
-speed = 320
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1350994434]
@@ -323,7 +322,7 @@ debug_color = Color(0.9256787, 4.2451324e-05, 0.6772523, 0.41960785)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=795892252]
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_flaea")
-animation = &"idle_down"
+animation = &"walk_up"
 autoplay = "idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1431017479]
