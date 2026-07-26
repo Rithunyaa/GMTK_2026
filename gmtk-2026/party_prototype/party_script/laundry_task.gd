@@ -7,9 +7,12 @@ var player_near = false
 func _ready():
 	$InteractibleArea.body_entered.connect(_on_player_entered)
 	$InteractibleArea.body_exited.connect(_on_player_exited)
+	
+	if GameTimer.laundry_done:
+		$Sprite2D.frame = 1
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("interact"):
 		print("E PRESSED")
 
@@ -17,7 +20,7 @@ func _process(delta):
 		start_laundry_task()
 
 
-func _input_event(viewport, event, shape_idx):
+func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			start_laundry_task()
@@ -38,7 +41,7 @@ func _on_player_exited(body):
 
 
 func start_laundry_task():
-	
-	await get_parent().get_node("DarkScreen").darker()
-	instructions.visible = false
-	get_tree().change_scene_to_file("res://party_prototype/party_scenes/cleanroom_level.tscn")
+	if not GameTimer.laundry_done:
+		await get_parent().get_node("DarkScreen").darker()
+		instructions.visible = false
+		get_tree().change_scene_to_file("res://party_prototype/party_scenes/cleanroom_level.tscn")
