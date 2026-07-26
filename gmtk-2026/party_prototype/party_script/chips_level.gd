@@ -69,4 +69,6 @@ func _on_chip_entered(area):
 
 func _change_scene():
 	GameTimer.chips_done = true
+	$Tick.show()
+	await $DarkScreen.darker()
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/kitchen.tscn")
