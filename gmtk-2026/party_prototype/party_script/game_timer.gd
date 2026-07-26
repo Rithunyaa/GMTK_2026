@@ -5,7 +5,8 @@ signal time_finished
 var show_intro = false
 var game_active = false
 
-var time_left = 60.0
+const LIMITED_TIME = 40.0
+var time_left = LIMITED_TIME
 var running = true
 var previous_scene: String = ""
 var party_ready = false
@@ -14,6 +15,7 @@ var chips_done = false
 var balloons_done = false
 var banners_done = false
 var game_over = false
+var time_used:float = 0
 
 
 func _process(delta):
@@ -32,6 +34,13 @@ func _process(delta):
 		)
 
 	time_updated.emit()
+	
+	if GameTimer.laundry_done \
+	and GameTimer.chips_done \
+	and GameTimer.balloons_done \
+	and GameTimer.banners_done \
+	and not time_used:
+		time_used = LIMITED_TIME - time_left
 
 
 func get_time_text():
@@ -44,7 +53,7 @@ func get_time_text():
 	]
 
 func reset_timer():
-		time_left = 60.0
+		time_left = LIMITED_TIME
 		running = true
 		game_over = false
 		GameTimer.laundry_done = false

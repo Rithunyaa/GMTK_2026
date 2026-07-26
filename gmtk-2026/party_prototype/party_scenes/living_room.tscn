@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://b07d1jf0jkth" path="res://party_prototype/party_script/balloon_task.gd" id="12_q0b67"]
 [ext_resource type="Texture2D" uid="uid://ck78xiklbdyya" path="res://party_prototype/party_assets/balloon_level/balloon_taskpoint.png" id="12_wxv7u"]
 [ext_resource type="Script" uid="uid://cg7f6lvnernpn" path="res://party_prototype/party_script/banner_task.gd" id="14_ktn3y"]
-[ext_resource type="Texture2D" uid="uid://ditsalpnnyu14" path="res://party_prototype/party_assets/banner_level/purple_banner.png" id="15_070ry"]
+[ext_resource type="Texture2D" uid="uid://b111i5tpcbt6q" path="res://party_prototype/party_assets/banner_level/banner_taskpoint.png" id="15_tsh0a"]
 [ext_resource type="Texture2D" uid="uid://b5m0v0ia3286t" path="res://party_prototype/party_assets/balloon_level/balloons.png" id="16_070ry"]
 [ext_resource type="Texture2D" uid="uid://ctyx7n1mxe4cn" path="res://party_prototype/party_assets/balloon_level/banners.png" id="17_r7fil"]
 [ext_resource type="Texture2D" uid="uid://b211gw75s7q30" path="res://party_prototype/party_assets/balloon_level/filled_bowl.png" id="18_tsh0a"]
@@ -422,7 +422,8 @@ script = ExtResource("14_ktn3y")
 
 [node name="Sprite2D" type="Sprite2D" parent="BannerTask" unique_id=1845423296]
 position = Vector2(93, 1290)
-texture = ExtResource("15_070ry")
+scale = Vector2(8, 8)
+texture = ExtResource("15_tsh0a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BannerTask" unique_id=1674159940]
 position = Vector2(92, 1276)

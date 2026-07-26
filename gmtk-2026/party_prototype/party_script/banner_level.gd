@@ -16,7 +16,7 @@ func _ready():
 		banners.append(banner)
 
 		banner.input_event.connect(
-			func(viewport, event, shape):
+			func(_viewport, event, _shape):
 				_on_banner_clicked(banner, event)
 		)
 
@@ -27,7 +27,7 @@ func _ready():
 	GameTimer.previous_scene = "banner_task"
 
 
-func _process(delta):
+func _process(_delta):
 
 	if current_line:
 		current_line.set_point_position(

@@ -18,7 +18,8 @@ func _ready():
 	and GameTimer.balloons_done \
 	and GameTimer.banners_done:
 
-		label.text = "[wave]You got ready in time!"
+		label.text = "[wave]You got ready in time!
+The time you used: " + str(int(GameTimer.time_used)) + "s"
 		playagain_button.text = "Play Again"
 
 	else:
