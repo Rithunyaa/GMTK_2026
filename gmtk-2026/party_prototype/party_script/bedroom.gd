@@ -165,6 +165,7 @@ func close_intro():
 	dialogue_text.visible = false
 
 	GameTimer.show_intro = false
+	waiting_to_close = false
 
 	#start_game()
 	GameTimer.reset_timer()
