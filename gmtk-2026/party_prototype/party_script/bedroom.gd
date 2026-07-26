@@ -49,8 +49,8 @@ func _ready():
 		
 	# still we need GameTimer.show_intro
 	# mayber passing "main_menu" via previous_scene is a bad idea
-	if not GameTimer.show_intro:
-			start_game()
+	#if not GameTimer.show_intro:
+			#start_game()
 
 
 	GameTimer.previous_scene = "bedroom"
@@ -172,16 +172,16 @@ func close_intro():
 
 
 
-func start_game():
-
-	GameTimer.game_active = true
-	dialogue_text.add_theme_constant_override("outline_size", 30)
-	dialogue_text.visible = true
-	
-	dialogue_text.text = "Click the laundry basket (highlighted white)"
-
-	#it is a bug,timer shouldnt be reset everytime whenever player enter
-	#GameTimer.reset_timer()
+#func start_game():
+#
+	#GameTimer.game_active = true
+	#dialogue_text.add_theme_constant_override("outline_size", 30)
+	#dialogue_text.visible = true
+	#
+	#dialogue_text.text = "Click the laundry basket (highlighted white)"
+#
+	##it is a bug,timer shouldnt be reset everytime whenever player enter
+	##GameTimer.reset_timer()
 
 
 
