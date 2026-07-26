@@ -8,7 +8,7 @@ extends Node2D
 
 
 var dialogue_message = "The party is starting soon! We need to finish everything before the timer runs out!
-(click anywhere to start)
+(press E to continue)
 "
 
 var typing = false
@@ -98,6 +98,16 @@ func _process(delta):
 		if auto_timer >= auto_start_time:
 
 			close_intro()
+	
+	if Input.is_action_just_pressed("interact"):
+		
+		if typing:
+
+			finish_text()
+
+		elif waiting_to_close:
+
+			close_intro()
 
 
 
@@ -120,21 +130,21 @@ func type_text():
 
 
 
-func _input(event):
-
-	if event is InputEventMouseButton:
-
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-
-
-			if typing:
-
-				finish_text()
-
-
-			elif waiting_to_close:
-
-				close_intro()
+#func _input(event):
+#
+	#if event is InputEventMouseButton:
+#
+		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+#
+#
+			#if typing:
+#
+				#finish_text()
+#
+#
+			#elif waiting_to_close:
+#
+				#close_intro()
 
 
 
