@@ -257,6 +257,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="Sprite2D" parent="CanvasLayer" unique_id=661088255]
+visible = false
 position = Vector2(576, 145)
 scale = Vector2(8, 8)
 texture = ExtResource("3_fp2x3")
