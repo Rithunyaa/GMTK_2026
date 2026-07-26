@@ -429,9 +429,8 @@ shape = SubResource("CircleShape2D_r7fil")
 debug_color = Color(0, 0.64705884, 0.1764706, 0.41960785)
 
 [node name="Finished_Balloons" type="Sprite2D" parent="." unique_id=42811403]
-visible = false
 z_index = 10
-position = Vector2(1481, 648)
+position = Vector2(1481, 560)
 scale = Vector2(8, 8)
 texture = ExtResource("16_070ry")
 
