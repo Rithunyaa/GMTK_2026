@@ -16,6 +16,8 @@ func _ready():
 	$Balloon3.set_process(false)
 	update_timer()
 	GameTimer.time_updated.connect(update_timer)
+	
+	GameTimer.previous_scene = "balloon_task"
 
 
 

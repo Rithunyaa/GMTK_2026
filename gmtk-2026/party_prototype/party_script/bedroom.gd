@@ -45,6 +45,12 @@ func _ready():
 		
 		"main_menu":
 			start_intro()
+		
+		
+	# still we need GameTimer.show_intro
+	# mayber passing "main_menu" via previous_scene is a bad idea
+	if not GameTimer.show_intro:
+			start_game()
 
 
 	GameTimer.previous_scene = "bedroom"
@@ -57,7 +63,7 @@ func _ready():
 #
 	#else:
 
-	start_game()
+#		start_game()
 
 
 
@@ -150,7 +156,7 @@ func close_intro():
 
 	GameTimer.show_intro = false
 
-	#start_game()
+	start_game()
 	GameTimer.reset_timer()
 
 
