@@ -6,6 +6,7 @@ func _on_playagain_button_pressed() -> void:
 	call_deferred("_change_scene")
 	
 func _change_scene():
+	GameTimer.reset_timer()
 	get_tree().change_scene_to_file("res://party_prototype/party_scenes/Bedroom.tscn")
 
 func _ready():
