@@ -22,6 +22,9 @@ func _ready():
 		
 		"hallway":
 			player.position = Vector2(516,1192)
+		
+		"banner_task":
+			player.position = Vector2(96,1170)
 	
 	GameTimer.previous_scene = "living_room"
 

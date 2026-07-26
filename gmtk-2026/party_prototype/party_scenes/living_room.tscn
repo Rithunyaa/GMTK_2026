@@ -300,7 +300,7 @@ autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1407059028]
 z_index = 2
-position = Vector2(936, 498)
+position = Vector2(1250, 498)
 script = ExtResource("4_wxv7u")
 metadata/_edit_group_ = true
 
